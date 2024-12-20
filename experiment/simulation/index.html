@@ -1,13 +1,2389 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
-</head>
-<body>
-		<!-- Your code goes here-->
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+
+    <title>Virtual Lab</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+
+    <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="style1.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+
+
+    <!-- <script type="text/javascript" src="jquerymin.js"></script> -->
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+
+    <!-- <script src="https://kit.fontawesome.com/afa6483c49.js" crossorigin="anonymous"></script> -->
+
+   <!-- <script type="text/javascript" src="main.js"></script> -->
+
+    <!-- WIRE================================================== -->
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/utils/Draggable.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/utils/Droppable.min.js"></script>
+
+
+
+<!-- Drag and Drop Online Link -->
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+
+
+<!-- Drag and Drop Offline Link -->
+
+    <script type="text/javascript" src="jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery/1.11.2/jquery-ui.min.js"></script>
+
+<!-- /////////////// mobiledrag-droplink-->
+ 
+  <script type="text/javascript" src="jquery/1.11.2/draganddrop.js"></script>
+
+
+    <script>
+
+        var simsubscreennum=0;
+
+        var temp=0;
+
+    </script>
+<style type="text/css">
+  
+  #loading {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  
+  position: fixed;
+  display: block;
+  /*opacity: 0.7;*/
+  background-color: #fff;
+  z-index: 9999;
+  text-align: center;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+#loading-image {
+    position: absolute;
+top: 30%;
+left: 40%;
+}
+
+</style>
+
+</head>
+
+
+<!-- =========================================== -->
+      <!-- Don't Write Code Above This Line -->
+
+<body style=" font-family: 'Roboto Slab', serif; ">
+<table align="center">
+  <tr>
+    <td>    
+    
+<div id="loading">
+    <img id="loading-image" src="831.svg" alt="Loading..." />
+    <center>
+        <h1 style="color: indigo;">Welcome to <i>"<strong style="color: red;">Virtual Labs</strong>"</i></h1>
+        <h2>Please wait while its loading...</h2>
+    </center>
+</div>    
+
+
+<div id="simscreen" style="overflow: hidden;">
+
+<div id="title"><h3 id="titleh3">Operation of Camera Drone</h3></div>
+
+
+<!-- ================================================================ -->
+
+ <!-- Scene start -->
+ 
+<div class="simsubscreen" id="canvas_start" style="visibility: visible; background-image: url(images/bgimag.jpg);" ></br>
+
+           
+           
+     <!--Blinking arrowcubox  -->
+ 
+<div class="blink_me" style="    border: 4px dashed #FFF;
+    position: absolute;
+    left: 330px;
+    top: 170px;
+    height: 100px;
+    width: 570px;
+    border-radius: 30px"></div>
+
+<span onclick="navNextstrt()" style="position: absolute; left: 360px; top: 195px; font-family: 'Acme', sans-serif; font-size: 50px; color: white; ">Click Here to Enter the Lab</span>
+ 
+
+    
+
+</div>
+
+
+<!-- ================================================================ -->
+
+ <!-- Scene 1 onload="dronefirstcome()"-->
+
+
+
+<div class="simsubscreen" id="canvas0" style="visibility: hidden; background-image: url(images/bgimag.jpg); background-position: inherit;">
+
+
+ 
+
+
+<img src="images/spray.png" id="spry1" style= "position: absolute; left: 332px;
+    top: 136px;
+    height: 300px; visibility: hidden; 
+"draggable="false"/>
+
+<img src="images/spray.png" id="spry2" style= "position: absolute;left: 0px;
+    top: 136px;
+    height: 300px; visibility: hidden;
+"draggable="false"/>
+
+<img src="images/spray.png" id="spry5" style= "position: absolute; left: 332px;
+    top: 136px;
+    height: 300px; visibility: hidden; 
+"draggable="false"/>
+
+<img src="images/spray.png" id="spry6" style= "position: absolute;left: 0px;
+    top: 136px;
+    height: 300px; visibility: hidden;
+"draggable="false"/>
+
+<img src="images/output_zkTrhR.gif" id="drnfirt" style=
+"position: absolute;
+    left: 1223px;
+    top: 32px;
+    height: 185px;
+"draggable="false"/>
+
+<img src="images/spray.png" id="spry3" style= "position: absolute;left: -25px;
+    top: 196px;
+    height: 300px; visibility: hidden;
+"draggable="false"/>
+
+<img src="images/spray.png" id="spry4" style= "position: absolute;left: 358px;
+    top: 196px;
+    height: 300px; visibility: hidden;
+"draggable="false"/>
+
+<img src="images/spray.png" id="spry7" style= "position: absolute;left: -25px;
+    top: 196px;
+    height: 300px; visibility: hidden;
+"draggable="false"/>
+
+<img src="images/spray.png" id="spry8" style= "position: absolute;left: 358px;
+    top: 196px;
+    height: 300px; visibility: hidden;
+"draggable="false"/>
+
+
+
+
+<div id="abttext" style="width: 1055px; height: 100px; position: absolute; top: 455px; left: 63px; background-color: #FFF; border-radius: 15px; opacity: 0.8; font-size: 18px; font-weight: bold; padding: 10px; text-align: justify; color: #000; display: none;" >
+	<b style=" font-family: 'Acme', sans-serif;font-size: 20px; ">Photography Drone</b> Phantom 4 Pro. DJI Phantom 4 Pro, released in November 2016, has a three-axis stabilized camera with a 1-inch (25 mm) 20 MP CMOS sensor FC6310. It upgrades its obstacle avoidance with five directional sensors. The Phantom 4 Pro offers two remote controllers, one with a dedicated screen (Phantom 4 Pro+) and one without. 
+  
+</div>
+<!-- <input type="button" id="btn" style="position:absolute; left: 1050px; top: 430px; cursor:pointer; font-size: 15px; background-color: steelblue; visibility: ; padding-top: 5px; color: #FFF;  padding-bottom: 5px;" value="&nbsp;come&nbsp;" onclick="dronefirstcome()"/> -->
+
+<span id="quadname" style="position: absolute; font-family: 'Acme', sans-serif; top: 50px; left: 655px; font-size: 50px; color: black; "></span>
+
+    <div style="position: absolute; font-family: 'Acme', sans-serif; left: 650px;
+    top: 115px;
+    font-size: 24px; color: black; font-weight: bolder; ">
+      
+      <p id="quadfeat1"></p> 
+      <p id="quadfeat2"></p> 
+      <p id="quadfeat3"></p>
+</div>
+      <div style="position: absolute; font-family: 'Acme', sans-serif; left: 910px;
+    top: 115px;
+    font-size: 24px; color: black; font-weight: bolder; "> 
+      <p id="quadfeat4"></p> 
+      <p id="quadfeat5"></p>     
+      <p id="quadfeat6"></p> 
+      <!-- <li></li><br> -->
+
+    </div>
+
+<!--Blinking arrowcubox  -->
+
+
+<input type="button" id="arrowintro1" style="position:absolute; left: 1124px;
+    top: 532px; cursor:pointer; font-size: 19px; background-color: #501b26; visibility:hidden; font-family: 'Acme', sans-serif; padding-top: 5px; color:  #FFF; border: 3px solid white; padding-bottom: 5px;" value="&nbsp;Next&nbsp;" onclick="navNext3a()"/>
+    <!-- navNext2 -->
+
+
+</div>
+
+<!-- ================================================================ -->
+
+ <!-- Scene 2 -->
+
+<div class="simsubscreen" id="canvas2" style="visibility: hidden; background-image: url(images/b4.jpg);" >
+
+<audio id="aud_precautions">
+        <source src="audios/precautions.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="pre1">
+        <source src="audios/pre1.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="pre2">
+        <source src="audios/pre2.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="pre3">
+        <source src="audios/pre3.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="pre4">
+        <source src="audios/pre4.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="pre5">
+        <source src="audios/pre5.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="pre6">
+        <source src="audios/pre6.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="pre7">
+        <source src="audios/pre7.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="pre8">
+        <source src="audios/pre8.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="pre9">
+        <source src="audios/pre9.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="pre10">
+        <source src="audios/pre10.mp3" type="audio/mpeg">
+</audio>
+ 
+
+<b style=" 
+    font-size: 33px;
+    position: absolute;
+    left: 520px; font-weight: bold; color:#FFF;
+    top: 25px; ">Precautions</b>
+
+<p id="prelist1" style="position: absolute; top: 70px; left: 50px; color: white; font-size: 25px; font-weight: bold; visibility: hidden ;">
+    1. Always use protective gloves, Never touch pesticides with bare hands.
+</p>
+<p id="prelist2" style="position: absolute; top: 120px; left: 50px; color: white; font-size: 25px; font-weight: bold; visibility: hidden ;">
+    2. Always pre-check your drone parts such as remote, battery etc & any sign of physical damage.
+</p>
+<p id="prelist3" style="position: absolute; top: 170px; left: 50px; color: white; font-size: 25px; font-weight: bold; visibility: hidden ;">
+    3. You must only fly one drone at a time.
+</p>
+<p id="prelist4" style="position: absolute; top: 220px; left: 50px; color: white; font-size: 25px; font-weight: bold; visibility: hidden ;">
+    4. You must keep your drone at least 30 meters away from other people.
+</p>
+<p id="prelist5" style="position: absolute; top: 270px; left: 50px; color: white; font-size: 25px; font-weight: bold; visibility: hidden ;">
+    5. Drone must operate in visual line of sight.
+</p>
+<p id="prelist6" style="position: absolute; top: 320px; left: 50px; color: white; font-size: 25px; font-weight: bold; visibility: hidden ;">
+    6. You must not fly your drone higher than 120 m or 400 feet above ground level.
+</p>
+<p id="prelist7" style="position: absolute; top: 370px; left: 50px; color: white; font-size: 25px; font-weight: bold; visibility: hidden ;">
+    7. You must only operate you drone during day time, avoid foggy or cloudy weather.
+</p>
+<p id="prelist8" style="position: absolute; top: 420px; left: 50px; color: white; font-size: 25px; font-weight: bold; visibility: hidden ;">
+    8. Do not make circuit changes or perform any wiring when power is on.
+</p>
+<p id="prelist9" style="position: absolute; top: 470px; left: 50px; color: white; font-size: 25px; font-weight: bold; visibility: hidden ;">
+    9. You must not fly your drone above people or in populous area like beach, park, events etc.
+</p>
+<p id="prelist10" style="position: absolute; top: 520px; left: 50px; color: white; font-size: 25px; font-weight: bold; visibility: hidden ;">
+    10. Know emergency exit routes.
+</p>
+<img id="blkimg" src="images/transboxblk.png" style="position: absolute;
+    left: -20px;
+    top: -0px;
+    height: 650px;
+    width: 1230px; display: none;">
+
+<p id="highlighttxt1" style="position: absolute; top: 280px; left: 50px; color: white; font-size: 35px; font-weight: bold;  display: none;"> 
+  1. Always use protective gloves, Never touch pesticides with bare hands.
+</p>
+<p id="highlighttxt2" style="position: absolute; top: 280px; left: 50px; color: white; font-size: 35px; font-weight: bold;  display: none;"> 
+  2. Always pre-check your drone parts such as remote, battery etc & any sign of physical damage.
+</p>
+<p id="highlighttxt3" style="position: absolute; top: 280px; left: 50px; color: white; font-size: 35px; font-weight: bold;  display: none;"> 
+  3. You must only fly one drone at a time.
+</p>
+<p id="highlighttxt4" style="position: absolute; top: 280px; left: 50px; color: white; font-size: 35px; font-weight: bold;  display: none;"> 
+  4. You must keep your drone at least 30 meters away from other people.
+</p>
+<p id="highlighttxt5" style="position: absolute; top: 280px; left: 50px; color: white; font-size: 35px; font-weight: bold;  display: none;"> 
+  5. Drone must operate in visual line of sight.
+</p>
+<p id="highlighttxt6" style="position: absolute; top: 280px; left: 50px; color: white; font-size: 35px; font-weight: bold;  display: none;"> 
+   6. You must not fly your drone higher than 120 m or 400 feet above ground level.
+</p>
+<p id="highlighttxt7" style="position: absolute; top: 280px; left: 50px; color: white; font-size: 35px; font-weight: bold;  display: none;"> 
+   7. You must only operate you drone during day time, avoid foggy or cloudy weather.
+</p>
+<p id="highlighttxt8" style="position: absolute; top: 280px; left: 50px; color: white; font-size: 35px; font-weight: bold;  display: none;"> 
+   8. Do not make circuit changes or perform any wiring when power is on.
+</p>
+<p id="highlighttxt9" style="position: absolute; top: 280px; left: 50px; color: white; font-size: 35px; font-weight: bold;  display: none;"> 
+   9. You must not fly your drone above people or in populous area like beach, park, events etc.
+</p>
+<p id="highlighttxt10" style="position: absolute; top: 280px; left: 50px; color: white; font-size: 35px; font-weight: bold;  display: none;"> 
+   10. Know emergency exit routes.
+</p>
+
+
+
+<!--Blinking arrowcubox  -->
+
+
+<input type="button" id="nextButton3a" style="position:absolute; left: 1124px;
+    top: 532px; cursor:pointer; font-size: 19px; background-color: #501b26; visibility:hidden; font-family: 'Acme', sans-serif; padding-top: 5px; color:  #FFF; border: 3px solid white; padding-bottom: 5px;" value="&nbsp;Next&nbsp;" onclick="navNext3a()"/>
+
+<input type="button" id="nextButton2_skp" style="position:absolute; left: 1124px;
+    top: 30px; cursor:pointer; font-size: 19px; background-color: #501b26; visibility: ; font-family: 'Acme', sans-serif; padding-top: 5px; color:  #FFF; border: 3px solid white; padding-bottom: 5px;" value="&nbsp;Skip&nbsp;" onclick="navNext3_skp()"/>
+
+
+</div>
+
+<!-- ================================================================ -->
+
+ <!-- Scene 3a -->
+
+<div class="simsubscreen" id="canvas3a" style="visibility: hidden; background-image: url(images/b4.jpg); background-position: bottom;" >
+
+
+<img src="images/table.png" style= "position: absolute;
+    left: 50px;
+    top: 465px;
+    height: 495px;
+    width: 1100px;
+"draggable="false"/>
+
+<img src="images/rc.png" style= "position: absolute; left: 820px;
+    top: 350px;
+    height: 185px;
+"draggable="false"/>
+
+<img src="images/dronewithoutwing.png" style= "position: absolute; left: 30px; top: 240px; height: 320px" draggable="false"/>
+
+<img src="images/battry1.png" id=" " style= "position: absolute; left: 730px;
+    top: 470px;
+    height: 60px ;" draggable="false"/>
+
+
+
+<img src="images/transbox.png" style= "position: absolute; left: 110px;
+    top: 280px;
+    height: 245px;
+    width: 370px; border:1px dashed red;
+"draggable="false" onclick="drn_tb1()" />
+
+
+<img src="images/prop1.png"  style= "position: absolute; left: 595px; top: 415px; transform: rotate(80deg); height: 150px;" draggable="false"/> 
+
+
+<img src="images/prop2.png" style= "position: absolute; left: 635px; top: 433px; transform: rotate(80deg); height: 150px;" draggable="false"  /> 
+
+
+<!-- <img src="images/keep1.png" id="keep4" style= "position: absolute; left: 815px;
+    top: 450px;
+    height: 95px; visibility: hidden;" draggable="false"/>
+
+<img src="images/keepup.png" id="keepup" style= "position: absolute; left: 448px;
+    top: 229px;
+    height: 58px; display: none; " draggable="false"/>
+ 
+
+<img src="images/cap.png" id="waterzoomcap"  style= "position: absolute; left: 435px;
+    top: 212px;
+    height: 58px; display: none; 
+"draggable="false" ondragstart="step3a_2hide()" />
+
+<img src="images/cap.png" id="waterzoomcap2"  style= "position: absolute; top: 480px; left:685px; height: 58px;transform:rotate(-33deg); visibility: hidden;" draggable="false" ondragstart="step3a_8hide()"/>
+
+<img src="images/cap.png" id="waterzoomcap3"  style= "position: absolute; left: 435px;
+    top: 212px;
+    height: 58px; visibility: hidden;" draggable="false"/>
+
+<img src="images/keep1.png" id="keep1" style= "position: absolute; left: 815px;
+    top: 450px;
+    height: 95px;" draggable="false" ondragstart="step3a_3hide()" />
+
+<img src="images/solutionline.png" id="fill_eff" style= "position: absolute; left: 460px;
+    top: 130px;
+    height: 90px;
+    width: 35px; display: none;
+"draggable="false"/>
+
+<img src="images/jar2.png" id="jar_liq" style= "position: absolute; left: 890px;
+    top: 290px;
+    height: 255px;
+    width: 300px;
+"draggable="false" ondragstart="step3a_4hide()" />
+
+<img src="images/transbox.png" id="jar_liq_tb" style= "position: absolute; left: 890px;
+    top: 290px;
+    height: 255px;
+    width: 300px;visibility: hidden;
+"draggable="false" onmouseover="onoverjar()" />
+
+
+<img src="images/jar2wh.png" id="jar_liqwh" style= "position: absolute; left: 445px;
+    top: -30px;
+    height: 255px;
+    width: 300px;visibility: hidden;
+"draggable="false" ondragstart="step3a_4hide()" />
+
+<img src="images/jar2wh.png" id="jar_liq2" style= "position: absolute; left: 445px;
+    top: -30px;
+    height: 255px;
+    width: 300px; visibility: hidden;
+"draggable="false" ondragstart="step3a_5hide()" />
+
+<img src="images/jar2.png" id="jar_liq2wh" style= "position: absolute; left: 890px;
+    top: 290px;
+    height: 255px;
+    width: 300px; visibility: hidden;
+"draggable="false" ondragstart="step3a_5hide()" />
+<img src="images/cap2.png" id="redcap" style= "position: absolute; left: 963px;
+    top: 300px;
+    height: 17px;
+"draggable="false" ondragstart="step3a_1hide()" />
+
+<img src="images/cap2.png" id="redcap2" style= "position: absolute; left: 760px;
+    top: 510px;
+    height: 17px; visibility: hidden;
+"draggable="false" ondragstart="step3a_6hide()" />
+
+<img src="images/keepup2.png" id="keepup2" style= "position: absolute; left: 450px;
+    top: 190px;
+    height: 32px; visibility: hidden; " draggable="false"/> 
+
+
+<div id="tgt_cap1" style=" position: absolute; top: 480px; left: 695px; border: 5px dashed black; width: 0px; height: 0px; visibility: hidden; ">
+
+<center style="position: relative; top: 30%; font-style: italic; font-size: 18px; color: black; font-weight: bold;"> Drop Here</center>
+
+</div>
+
+
+<div id="tgt_cap2" style=" position: absolute; top: 480px; left: 645px; border: 5px dashed black; width: 0px; height: 0px; visibility: hidden; ">
+
+<center style="position: relative; top: 30%; font-style: italic; font-size: 18px; color: black; font-weight: bold;"> Drop Here</center>
+
+</div>
+
+<div id="tgt_retncap2" style=" position: absolute; top: 170px; left: 410px; border: 5px dashed black; width: 0px; height: 0px; visibility: hidden; ">
+
+<center style="position: relative; top: 30%; font-style: italic; font-size: 18px; color: black; font-weight: bold;"> Drop Here</center>
+
+</div>
+
+<div id="tgt_keep1" style=" position: absolute; top: 130px; left: 415px; border: 5px dashed black; width: 0px; height: 0px; visibility: hidden; ">
+
+<center style="position: relative; top: 30%; font-style: italic; font-size: 22px; color: black; font-weight: bold;"> Drop Here</center>
+
+</div>
+
+<div id="tgt_jar1" style=" position: absolute; top: 10px; left: 425px; border: 5px dashed black; width: 0px; height: 0px; visibility: hidden; ">
+
+<center style="position: relative; top: 30%; font-style: italic; font-size: 22px; color: black; font-weight: bold;"> Drop Here</center>
+
+</div>
+
+<div id="tgt_jar2" style=" position: absolute; top: 310px; left: 970px; border: 5px dashed black; width: 0px; height: 0px; visibility: hidden; ">
+
+<center style="position: relative; top: 35%; font-style: italic; font-size: 25px; color: black; font-weight: bold;"> Drop Here</center>
+
+</div>
+
+<div id="tgt_capr2" style=" position: absolute; top: 250px; left: 940px; border: 5px dashed black; width: 0px; height: 0px; visibility: hidden; ">
+
+<center style="position: relative; top: 25%; font-style: italic; font-size: 18px; color: black; font-weight: bold;"> Drop Here</center>
+
+</div>-->
+
+<div id="tgt_keep2" style=" position: absolute; top: 430px; left: 820px; border: 5px dashed black; width: 0px; height: 0px; visibility: hidden; ">
+
+<center style="position: relative; top: 25%; font-style: italic; font-size: 18px; color: black; font-weight: bold;"> Drop Here</center>
+
+</div> 
+
+<!-- Steps Start here -->
+
+<div id="step3a_1" class="step" style=" position: absolute; left: 180px; top: 180px; height: 55px; width: 230px; display: none; " >
+
+    <span style="position: absolute; left: 5px; top: 7px; font-size: 18px; font-weight: bold;">Click on the Drone to see the table top view.</span>
+
+</div>
+<span class="blink_me" id="step3a_arw1" style="position: absolute;
+    font-size: 40px;
+    left: 285px;
+    top: 250px;
+    color: #ff0000;
+    visibility: hidden;" ><strong><i class="fa fa-arrow-down"></i></strong></span>
+<!-- 
+<div id="step3a_2" class="step" style=" position: absolute; left: 335px; top: 287px; height: 55px; width: 220px; display: none; " >
+
+    <span style="position: absolute; left: 5px; top: 7px; font-size: 18px; font-weight: bold;">Drag the cap of drone and drop it in the box.</span>
+
+</div>
+
+<span class="blink_me" id="step3a_arw2" style="position: absolute; font-size: 40px; left: 435px; top: 242px; color: #ff0000; visibility: hidden;" ><strong><i class="fa fa-arrow-up"></i></strong></span>
+
+<div id="step3a_3" class="step" style=" position: absolute; left: 765px; top: 335px; height: 55px; width: 220px; display: none; " >
+
+    <span style="position: absolute; left: 5px; top: 7px; font-size: 18px; font-weight: bold;">Drag the keep and drop it in the box.</span>
+
+</div>
+
+<span class="blink_me" id="step3a_arw3" style="position: absolute;
+    font-size: 40px;left: 855px;
+    top: 400px; color: #ff0000; visibility: hidden;" ><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+<div id="step3a_4" class="step" style=" position: absolute; left: 925px; top: 190px; height: 55px; width: 220px; display: none; " >
+
+    <span style="position: absolute; left: 5px; top: 7px; font-size: 18px; font-weight: bold;">Drag the pesticides cane and drop it in the box.</span>
+
+</div> 
+
+<span class="blink_me" id="step3a_arw4" style="position: absolute;
+    font-size: 40px; left: 1025px; top: 250px; color: #ff0000; visibility: hidden;" ><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+<div id="step3a_5" class="step" style=" position: absolute; left: 720px; top: 65px; height: 55px; width: 250px; display: none; " >
+
+    <span style="position: absolute; left: 5px; top: 7px; font-size: 18px; font-weight: bold;">Drag the pesticides cane and drop it back in the box.</span>
+
+</div>
+
+<span class="blink_me" id="step3a_arw5" style="position: absolute;
+    font-size: 40px; left: 685px; top: 70px; color: #ff0000; visibility: hidden;" ><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+<div id="step3a_6" class="step" style=" position: absolute; left: 630px; top: 400px; height: 55px; width: 280px; display: none; " >
+
+    <span style="position: absolute; left: 5px; top: 7px; font-size: 18px; font-weight: bold;">Drag the cap of pesticides and drop it in the box to close it.</span>
+
+</div>
+
+<span class="blink_me" id="step3a_arw6" style="position: absolute;
+    font-size: 40px; left: 760px; top: 460px; color: #ff0000; visibility: hidden;" ><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+<div id="step3a_7" class="step" style=" position: absolute;left: 355px; top: 50px; height: 55px; width: 220px; display: none; " >
+
+    <span style="position: absolute; left: 5px; top: 7px; font-size: 18px; font-weight: bold;">Drag the keep and drop it back in the box.</span>
+
+</div>
+
+<span class="blink_me" id="step3a_arw7" style="position: absolute; font-size: 40px; left: 450px; top: 110px; color: #ff0000; visibility: hidden;" ><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+<div id="step3a_8" class="step" style=" position: absolute; left: 580px; top: 380px; height: 55px; width: 240px; display: none; " >
+    <span style="position: absolute; left: 5px; top: 7px; font-size: 18px; font-weight: bold;">Drag the cap of drone and drop it in the box to close it.</span>
+</div>
+
+<span class="blink_me" id="step3a_arw8" style="position: absolute; font-size: 40px; left: 695px; top: 440px; color: #ff0000; visibility: hidden;" ><strong><i class="fa fa-arrow-down"></i></strong></span> -->
+<!-- 
+<div id="step3a_6" class="step" style=" position: absolute; left: 685px; top: 270px; height: 55px; width: 220px; display: none; " >
+
+    <span style="position: absolute; left: 5px; top: 7px; font-size: 18px; font-weight: bold;">step6</span>
+
+</div>
+
+<div id="step3a_6" class="step" style=" position: absolute; left: 685px; top: 270px; height: 55px; width: 220px; display: none; " >
+
+    <span style="position: absolute; left: 5px; top: 7px; font-size: 18px; font-weight: bold;">step6</span>
+
+</div>
+<input type="button" id="nextButton3" style="position:absolute; left: 1124px;
+    top: 532px; cursor:pointer; font-size: 19px; background-color: #501b26; font-family: 'Acme', sans-serif; padding-top: 5px; color:  #FFF; border: 3px solid white; padding-bottom: 5px; visibility: hidden;" value="&nbsp;Next&nbsp;" onclick="navNext3()"/> -->
+
+</div>
+<!-- ================================================================ -->
+
+ <!-- Scene 3 -->
+
+<div class="simsubscreen" id="canvas3" style="visibility: hidden; background-image: url(images/b4.jpg); background-position: bottom;" >
+
+
+<img src="images/table_topview.png" style= "position: absolute;     left: 20px;
+    top: 30px;
+    height: 550px;
+    width: 1160px;
+"draggable="false"/>
+<img src="images/topviewdrone.png" style= "position: absolute; left: 140px;
+    top: 65px;
+    height: 485px;
+"draggable="false"/>
+
+
+
+<img src="images/battry.png" id="ins_battry" style= "position: absolute; left: 1025px;
+    top: 355px; height: 190px; width: 150px;" draggable="false"/>
+
+<img src="images/topviewdroneup.png" style= "position: absolute; left: 140px;
+    top: 65px;
+    height: 485px;
+"draggable="false"/>
+
+<img src="images/prop1.png" id="pro1" style= "position: absolute; left: 770px; top: 30px; transform: rotate(80deg); height: 350px;" draggable="false"/>
+
+<img src="images/prop1.png" id="pro2" style= "position: absolute; left: 800px; top: 100px; transform: rotate(80deg); height: 350px;" draggable="false"/> 
+
+<img src="images/prop2.png" id="pro3" style= "position: absolute; left: 830px; top: 170px; transform: rotate(80deg); height: 350px;" draggable="false" />
+
+<img src="images/prop2.png" id="pro4" style= "position: absolute; left: 830px; top: 240px; transform: rotate(80deg); height: 350px;" draggable="false" />
+
+ 
+
+<div id="tgt_pro1" style=" position: absolute; top: 65px; left: 30px; border: 5px dashed red; width: 0px; height: 0px; visibility: hidden; ">
+
+<center style="position: relative; top: 25%; font-style: italic; font-size: 18px; color: red; font-weight: bold;"> Drop Here</center>
+
+</div>   
+ 
+
+<div id="tgt_pro2" style=" position: absolute; top: 470px; left: 430px; border: 5px dashed red; width: 0px; height: 0px; visibility: hidden; ">
+
+<center style="position: relative; top: 25%; font-style: italic; font-size: 18px; color: red; font-weight: bold;"> Drop Here</center>
+
+</div>  
+ 
+
+<div id="tgt_pro3" style=" position: absolute; top: 70px; left: 420px; border: 5px dashed red; width: 0px; height: 0px; visibility: hidden; ">
+
+<center style="position: relative; top: 25%; font-style: italic; font-size: 18px; color: red; font-weight: bold;"> Drop Here</center>
+
+</div> 
+ 
+
+<div id="tgt_pro4" style=" position: absolute; top: 470px; left: 30px; border: 5px dashed red; width: 0px; height: 0px; visibility: hidden; ">
+
+<center style="position: relative; top: 25%; font-style: italic; font-size: 18px; color: red; font-weight: bold;"> Drop Here</center>
+
+</div>
+
+
+<div id="tgt_battery" style=" position: absolute; top: 360px; left: 303px; border: 5px dashed red; width: 0px; height: 0px; visibility: hidden; ">
+
+<center style="position: relative; top: 25%; font-style: italic; font-size: 18px; color: red; font-weight: bold;"> Drop Here</center>
+
+</div>
+
+<!-- Steps Start here -->
+
+<div id="step3_1" class="step" style=" position: absolute; left: 680px; top: 80px; height: 55px; width: 230px; display: none; " >
+
+    <span style="position: absolute; left: 5px; top: 7px; font-size: 18px; font-weight: bold;">Drag Propeller and put it in the drop box.</span>
+
+</div>
+<span class="blink_me" id="step3_arw1" style="position: absolute;
+    font-size: 40px;
+   	left: 785px;
+    top: 140px;
+    color: #ff0000;
+    visibility: hidden;" ><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+<div id="step3_2" class="step" style=" position: absolute; left: 720px;
+    top: 140px; height: 55px; width: 230px; display: none; " >
+
+    <span style="position: absolute; left: 5px; top: 7px; font-size: 18px; font-weight: bold;">Drag Propeller and put it in the drop box.</span>
+
+</div>
+<span class="blink_me" id="step3_arw2" style="position: absolute;
+    font-size: 40px;
+   	left: 815px;
+    top: 210px;
+    color: #ff0000;
+    visibility: hidden;" ><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+<div id="step3_3" class="step" style=" position: absolute; left: 740px; top: 210px; height: 55px; width: 230px; display: none; " >
+
+    <span style="position: absolute; left: 5px; top: 7px; font-size: 18px; font-weight: bold;">Drag Propeller and put it in the drop box.</span>
+
+</div>
+<span class="blink_me" id="step3_arw3" style="position: absolute;
+    font-size: 40px;
+   	left: 845px;
+    top: 280px;
+    color: #ff0000;
+    visibility: hidden;" ><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+<div id="step3_4" class="step" style=" position: absolute; left: 740px; top: 290px; height: 55px; width: 230px; display: none; " >
+
+    <span style="position: absolute; left: 5px; top: 7px; font-size: 18px; font-weight: bold;">Drag Propeller and put it in the drop box.</span>
+
+</div>
+
+<span class="blink_me" id="step3_arw4" style="position: absolute;
+    font-size: 40px;
+   	left: 850px;
+    top: 350px;
+    color: #ff0000;
+    visibility: hidden;" ><strong><i class="fa fa-arrow-down"></i></strong></span> 
+
+
+<div id="step3_5" class="step" style=" position: absolute; left: 800px; top: 400px; height: 55px; width: 180px; display: none; " >
+
+    <span style="position: absolute; left: 5px; top: 7px; font-size: 18px; font-weight: bold;">Drag battery and put it in the drop box.</span>
+
+</div>
+
+<span class="blink_me" id="step3_arw5" style="position: absolute;
+    font-size: 40px;
+   	left: 1000px;
+    top: 405px;
+    color: #ff0000;
+    visibility: hidden;" ><strong><i class="fa fa-arrow-right"></i></strong></span>    
+<!-- Steps End Here -->
+
+
+<!--Blinking arrowcubox  -->
+
+<input type="button" id="nextbtn3" style="position:absolute; left: 1124px;
+    top: 532px; cursor:pointer; font-size: 19px; background-color: #501b26; visibility:hidden; font-family: 'Acme', sans-serif; padding-top: 5px; color:  #FFF; border: 3px solid white; padding-bottom: 5px;" value="&nbsp;Next&nbsp;" onclick="nextbtn3()"/>
+</div>
+
+
+ <!-- Scene 3b -->
+
+<div class="simsubscreen" id="canvas3b" style="visibility: hidden; background-image: url(images/b4.jpg); background-position: bottom;" >
+
+
+<!-------------------------MCQ canvas5-------------------------------->
+
+<div id="question1" style=" position: absolute; width: 845px; height: 412px; left: 155px; top: 85px;padding: 10px; border: 7px solid white; background-image: linear-gradient(45deg, #ffd8cb, #e9e4f0); " >
+
+<span style="font-size: 30px; font-weight: bold; margin-left: 320px; margin-right: 150px;" > <u>Test Your Memory</u></span>
+
+<span style="font-size: 22px; font-weight: bold; position: absolute; top: 20px;
+    left: 655px;" > Total Marks:</span>
+
+<span id="mrk_01" style="font-size: 22px; font-weight: bold; position: absolute; top: 20px; left: 790px; visibility: ;" > </span>
+
+<span style="position: absolute; left: 50px; top: 80px; font-size: 24px; font-weight: bold;" >Q1.</span>
+
+<span style="position: absolute; left: 90px; top: 80px; font-size: 24px; font-weight: bold;">Which following is not a platform of Aerial Photography?
+</span>
+
+    <br>
+
+     <span  style="position: absolute; left: 45px; top: 160px; font-size: 24px;"><strong> A </strong>&nbsp;&nbsp;<input type="radio" name="q1" id="optionA" value="Incorrect Answer">&nbsp;Aircraft<br></span>
+
+       <span style="position: absolute; left: 455px; top: 160px; font-size: 24px;"><strong> B </strong> &nbsp;&nbsp;<input type="radio" name="q1" id="optionB" value="Correct Answer">&nbsp;Satellite<br></span>
+
+      <span style="position: absolute; left: 45px; top: 260px; font-size: 24px;"><strong> C </strong>&nbsp;&nbsp;<input type="radio" name="q1" id="optionC" value="Incorrect Answer">&nbsp;Drone<br></span>
+
+      <span style="position: absolute; left: 455px; top: 260px; font-size: 24px;"><strong> D </strong> &nbsp;&nbsp;<input type="radio" name="q1" id="optionD" value="Incorrect Answer">&nbsp;Kite<br></span>
+
+    <div id="ans_can4" style= "color:red; left: 330px; top: 338px; position: absolute; font-size: 30px; font-weight: bold;">
+    </div>
+
+    <div id="got_mrkcan4" style= "color:black; left: 305px; top: 387px; position: absolute; font-size: 22px; font-weight: bold; visibility: hidden;">Congrats !! You get "1" mark.
+    </div>
+
+    <input type="button" id="nextButton55" style="position:absolute; left: 770px;
+    top: 370px; cursor:pointer; font-size: 19px; background-color: #501b26; visibility: hidden; font-family: 'Acme', sans-serif; padding-top: 5px; color:  #FFF; border: 3px solid white; padding-bottom: 5px;" value="&nbsp;Next&nbsp;" onclick="nextbtn3b()"/>
+
+    <input type="button" id="showans" style="position:absolute; left: 640px;
+    top: 340px; cursor:pointer; font-size: 19px; background-color: #501b26; font-family: 'Acme', sans-serif; padding-top: 5px; color:  #FFF; border: 3px solid white; padding-bottom: 5px;" value="&nbsp;Submit&nbsp;" onclick="ansshw_c4()"/>
+
+</div>
+
+<!-------------------------MCQ canvas5-------------------------------->
+
+</div>
+<!-- ================================================================ -->
+
+ <!-- Scene 4 -->
+
+<div class="simsubscreen" id="canvas4" style="visibility: hidden; background-image: url(images/b4.jpg); background-position: bottom;" >
+
+
+
+<img src="images/table.png" style= "position: absolute;
+    left: 50px;
+    top: 465px;
+    height: 495px;
+    width: 1100px;
+"draggable="false"/>
+
+<img src="images/rc.png" id="only_rc" style= "position: absolute; left: 820px;
+    top: 350px;
+    height: 185px;
+"draggable="false"/>
+
+<img src="images/dronefirstpage.png" style= "position: absolute; left: 30px; top: 240px; height: 320px" draggable="false"/>
+
+
+<img src="images/transbox.png" id="remotezoom_tb" style= "position: absolute; left: 820px;
+    top: 350px;
+    height: 170px; border: 2px dashed lime;
+"draggable="false" onclick="zoom_remote()" />
+
+<img src="images/transbox.png" id="zoomscreen_tb" style= "position: absolute; left: 840px;
+    top: 357px;
+    height: 63px;
+    width: 124px;
+    border: 2px dashed lime; visibility: hidden;
+"draggable="false" onclick="zoom_screen()" />
+
+
+<img src="images/zoomremotepower.png" id="remotezoombig" style= "position: absolute; left: 600px;
+    top: 130px;
+    border: 5px solid #000;
+    border-radius: 400px;
+    height: 435px; visibility:  hidden;
+"draggable="false"/>
+
+
+
+<img src="images/zoomremotelight.png" id="rcpowerlight" style= "position: absolute; left: 813px; top: 455px; border-radius: 200px; height: 16px; visibility: hidden;" draggable="false"/>
+
+<img src="images/transbox.png" id="zoompower_tb" style= "position: absolute; left: 754px; top: 301px; border: 4px dashed lime; border-radius: 255px; height: 42px; width: 105px; transform: rotate(-4deg); visibility:  hidden;" draggable="false" onclick="pow_on()" />
+
+<img src="images/scr1.png" id="screenzoombig2" style= "position: absolute; left: 506px;
+    top: 76px; height: 313px; width: 637px; visibility:  hidden;
+"draggable="false"/>
+
+
+<img src="images/scr2.png" id="screenzoombig3" style= "position: absolute; left: 506px;
+    top: 76px; height: 313px; width: 637px; visibility:  hidden;
+"draggable="false"/>
+
+<img src="images/scr3.png" id="screenzoombig4" style= "position: absolute; left: 506px;
+    top: 76px; height: 313px; width: 637px; visibility:  hidden;
+"draggable="false"/>
+
+<img src="images/scr4.png" id="screenzoombig5" style= "position: absolute; left: 506px;
+    top: 76px; height: 313px; width: 637px; visibility:  hidden;
+"draggable="false"/>
+
+<img src="images/scr5.png" id="screenzoombig6" style= "position: absolute; left: 506px;
+    top: 76px; height: 313px; width: 637px; visibility:  hidden;
+"draggable="false"/>
+
+<img src="images/scr6.png" id="screenzoombig7" style= "position: absolute; left: 506px;
+    top: 76px; height: 313px; width: 637px; visibility:  hidden;
+"draggable="false"/>
+
+<img src="images/scr7.png" id="screenzoombig8" style= "position: absolute; left: 506px;
+    top: 76px; height: 313px; width: 637px; visibility:  hidden;
+"draggable="false"/>
+
+<img src="images/scr8.png" id="screenzoombig9" style= "position: absolute; left: 506px;
+    top: 76px; height: 313px; width: 637px; visibility:  hidden;
+"draggable="false"/>
+
+<img src="images/scr9.png" id="screenzoombig10" style= "position: absolute; left: 506px;
+    top: 76px; height: 313px; width: 637px; visibility: hidden ;
+"draggable="false"/>
+
+<img src="images/scr10.png" id="screenzoombig11" style= "position: absolute; left: 506px;
+    top: 76px; height: 313px; width: 637px; visibility:  hidden;
+"draggable="false"/>
+
+<img src="images/scr11.png" id="screenzoombig12" style= "position: absolute; left: 506px;
+    top: 76px; height: 313px; width: 637px; visibility:  hidden;
+"draggable="false"/>
+
+<img src="images/scr12.png" id="screenzoombig13" style= "position: absolute; left: 506px;
+    top: 76px; height: 313px; width: 637px; visibility:  hidden;
+"draggable="false"/>
+
+<img src="images/scr13.png" id="screenzoombig14" style= "position: absolute; left: 506px;
+    top: 76px; height: 313px; width: 637px; visibility:  hidden;
+"draggable="false"/>
+
+<img src="images/screenzoomopen.png" id="screenzoombig1" style= "position: absolute; left: 460px;
+    top: 55px; height: 355px; visibility:  hidden;
+"draggable="false"/>
+
+<div id="agriment" style="position: absolute; left: 525px;
+    top: 132px;padding-right: 15px;
+    padding-left: 15px;
+    overflow-x: hidden;
+    height: 245px;
+    width: 586px; visibility: hidden; text-align: justify;">
+If you receive commercial email or text messages from us, you may unsubscribe at any time by following the instructions contained within the email or text message. You may also opt out from receiving commercial email or text messages from us or object to be profiled by sending your request to us by email at support@dji.com.<br>
+<br>
+
+If you are located in the European Economic Area, you may also have the right to request access to additional information, including the right to request access to and receive certain information we maintain about you; to update or correct inaccuracies in the information we maintain about you; to receive a copy of the information which you provided for its transmission to another company; to object to the processing on grounds relating to your particular situation; and to have the information blocked, deleted, or erased, as appropriate. When we process personal data on the basis of your consent, you can also withdraw your consent. If you withdraw your consent, we will apply your preferences going forward, and this will not affect the lawfulness of the processing before you withdrew your consent.<br>
+<br>
+Note, however, that if you exercise your right to object or your rights of blocking, deletion or to be “forgotten” or if you decline to share certain information with us, or if you withdraw your consent to our processing of information about you, we may not be able to provide to you some, or any, of the features and functionality of DJI Products and Services.<br>
+<br>
+Likewise, if you close your DJI account, you will not be able to sign in to DJI Products or Services or access any of your information. However, you can open a new account at any time. Please note that while any changes you make will be reflected in active user databases within a reasonable period of time, we may retain all information you submit, as authorized under applicable law, for backups, archiving, prevention of fraud and abuse, analytics, satisfaction of legal obligations, or where we otherwise reasonably believe that we have a legitimate reason to do so. In addition, if certain information has already been provided to third parties as described in this Policy, retention of that information will be subject to those third parties’ policies.<br>
+<br>
+If you wish to exercise any rights you have under applicable data protection law, including the right to access, amend or delete any information we hold about you, you may contact us at support@dji.com.<br>
+<br>
+<strong>Third-Party Services</strong><br><br>
+DJI Products and Services may contain features or links to websites and services provided by third parties. Any information you choose to provide on third-party sites or services, or any information otherwise collected by such third-party sites or services is collected directly by the operators of such services and is subject to those operators' policies, if any, governing privacy and security, even if accessed through DJI Products and Services.<br>
+<br>
+We are not responsible for the content or privacy and security practices and policies of third-party sites or services to which links or access are provided through DJI Products and Services. If you opt in to use such third-party services, please be sure to check the Privacy Policies of these sites as well as their "Terms of Use" before engaging in any business or uploading any information.
+<br><br>
+<strong>Children's Privacy</strong><br><br>
+Except for certain products that are marked as “14+” or “for customers over the age of 14”, DJI Products and Services are not directed to children under the age of 16. We do not knowingly collect information from children under the age of 16 without obtaining parental consent.
+<br><br>
+<strong>Data Security</strong><br><br>
+We use certain physical, organizational, and technical safeguards that are designed to improve the integrity and security of information that we collect and maintain. Please be aware that no security measures are perfect or impenetrable and thus we cannot and do not guarantee that your information will not be accessed, viewed, disclosed, altered, or destroyed by breach of any of our physical, technical, or organizational safeguards.
+<br>
+</div>
+ <img src="images/transbox.png" id="Drone_agri" style= "position: absolute; left: 1050px; top: 80px; height: 32px; width: 85px; visibility: hidden; border: 2px dashed red;" onclick="agree1()" draggable="false"/>
+
+ <div id="country1" style="position: absolute; left: 525px;
+    top: 132px;padding-right: 15px;
+    padding-left: 15px;
+    overflow-x: hidden;
+    height: 245px;
+    width: 586px; visibility: hidden; font-size: 24px;
+    color: #7f7d7a; text-align: justify;list-style-type: none;">
+    <!-- <ul> -->
+<li id="listver2" style="padding: 10px;"><strong>Australia</strong></li>
+<li id="listver2" style="padding: 10px;"><strong>Bangladesh</strong></li>
+<li id="listver2" style="padding: 10px;"><strong>Brazil</strong></li>
+<li id="listver2" style="padding: 10px;" onclick="india_select()"><strong>India</strong></li>
+<li id="listver2" style="padding: 10px;"><strong>Canada</strong></li>
+<li id="listver2" style="padding: 10px;"><strong>Belgium</strong></li>
+<li id="listver2" style="padding: 10px;"><strong>China</strong></li>
+<li id="listver2" style="padding: 10px;"><strong>Germany</strong></li>
+<li id="listver2" style="padding: 10px;"><strong>Colombia</strong></li>
+<li id="listver2" style="padding: 10px;"><strong>Iceland</strong></li>
+<li id="listver2" style="padding: 10px;"><strong>Indonesia</strong></li> 
+<!-- </ul>  -->
+</div>
+
+<div id="signup1" style="position: absolute; left: 685px;
+    top: 188px; 
+    height: 198px;
+    width: 278px;
+    /*border: 1px solid;*/
+    visibility: hidden;
+    font-size: 24px; ">
+	<input type="email" id="inp_1" style="position: absolute; left: 0px; top: 1px; width: 270px; border: none; font-family: 'Acme'; border-bottom: 2px solid #a2a1a1; font-size: 16px; outline: none; background-color: #dddad5; visibility: ; "  placeholder="Email">
+    <input type="password" id="inp_2" style="position: absolute; left: 0px; top: 35px; width: 270px; border: none; font-family: 'Acme'; border-bottom: 2px solid #a2a1a1; font-size: 16px; outline: none; background-color: #dddad5; visibility: ;"  placeholder="Password">
+	<input type="password" id="inp_3" style="position: absolute; left: 0px; top: 69px; width: 270px; border: none; font-family: 'Acme'; border-bottom: 2px solid #a2a1a1; font-size: 16px; outline: none; background-color: #dddad5; visibility: ;"  placeholder="Confirm Password">
+	<input type="text" id="inp_4" style="position: absolute; left: 140px; top: 110px; width: 130px; border: 1px red; font-family: 'Acme'; border-bottom: 2px solid #a2a1a1; font-size: 16px; outline: none; background-color: #dddad5; visibility: ;"  placeholder="Captcha">
+	<!-- <img src="images/transbox.png" id="sign_tb1" style="position: absolute; left: 0px; top: 1px; width: 270px;  height: 20px; visibility: hidden;" onclick="sign1()"> -->
+    <!-- <img src="images/transbox.png" id="sign_tb2" style="position: absolute; left: 0px; top: 35px; width: 270px;  height: 20px; visibility: hidden;" onclick="sign2()"> -->
+    <!-- <img src="images/transbox.png" id="sign_tb3" style="position: absolute; left: 0px; top: 69px; width: 270px;  height: 20px; visibility: hidden;" onclick="sign3()"> -->
+    <!-- <img src="images/transbox.png" id="sign_tb4" style="position: absolute; left: 140px; top: 108px; width: 135px;  height: 20px; visibility: hidden;" onclick="sign4()"> -->
+	<img src="images/transbox.png" id="signsubmit_tb1" style="position: absolute; left: 10px;
+    top: 155px;
+    width: 257px;
+    height: 36px; visibility: hidden;" onclick="submitfrm()">
+</div>
+
+<div id="id_pass" style="position: absolute; left: 200px;
+    top: 90px; visibility: hidden; background-color: #FFF; padding: 30px; border-radius: 20px;">
+
+	<table>
+		<tr>
+			<td>Username : </td>
+			<td><strong id="ans_canid"></strong></td>
+		</tr>
+		<tr>
+			<td>Password : </td>
+			<td><strong id="ans_canpass"></strong></td>
+		</tr>
+	</table>
+
+</div>
+
+
+<div id="signup2" style="position: absolute; left: 688px;
+    top: 193px; 
+    height: 145px;
+    width: 278px;
+    /*border: 1px solid;*/
+    visibility: hidden;
+    font-size: 24px; ">
+	<input type="email" id="inp_5" style="position: absolute; left: 0px; top: 0px; font-size: 20px;  width: 270px; height: 30px; border: none; border-bottom: 2px solid #a2a1a1; font-family: 'Acme'; font-size: 16px; outline: none; background-color: #dddad5; visibility:  ;" placeholder="Email">
+    <input type="password" id="inp_6" style="position: absolute; left: 0px; top: 47px; width: 270px; font-size: 20px; height: 30px; border: none; border-bottom: 2px solid #a2a1a1; font-family: 'Acme'; font-size: 16px; outline: none; background-color: #dddad5; visibility:  ;" placeholder="Password">
+ 
+	<img src="images/transbox.png" id="sign_tb5" style="position: absolute; left: 0px;
+    top: 0px;
+    width: 275px;
+    height: 35px; visibility: hidden;border: 0px solid red;" onclick="sign5()">
+
+    <img src="images/transbox.png" id="sign_tb6" style="position: absolute; left: 0px; top: 45px;
+    width: 275px;
+    height: 35px; visibility: hidden;border: 0px solid red;" onclick="sign6()"> 
+
+	<img src="images/transbox.png" id="signsubmit_tb2" style="position: absolute; left: 10px; top: 107px; width: 257px; height: 37px; visibility: ; border: 0px solid green;" onclick="submitfrm2()">
+</div>
+
+<div id="home1" style="position: absolute; left: 565px;
+    top: 150px; 
+    height: 155px;
+    width: 394px;
+    visibility: hidden;
+    border: 0px solid lime;
+    color: #7f7d7a; ">
+    <!-- <ul> -->
+<div id="listver3" style="position: absolute; left: 0px;
+    top: 3px;
+    border: 0px solid red;
+    height: 40px;
+    width: 390px;"> </div>
+<div id="listver3" style="position: absolute; left: 0px;
+    top: 55px;
+    border: 0px solid red;
+    height: 40px;
+    width: 390px;"> </div>
+<div id="listver3" style="position: absolute; left: 0px;
+    top: 104px;
+    border: 0px solid red;
+    height: 40px;
+    width: 390px;" onclick="home_select()"> </div>
+ 
+<!-- </ul>  -->
+</div>
+
+ <div id="listver4" style="position: absolute; left: 565px;
+    top: 255px;
+    border: 0px solid red;
+    height: 40px;
+    width: 390px; visibility: hidden;" > </div>
+
+<img src="images/transbox.png" id="always1" style="position: absolute; left: 1005px;
+    top: 335px;
+    border: 2px dashed red;
+    height: 40px;
+    width: 110px; visibility: hidden;" onclick="home_selectalways()">
+
+<div id="enable_text" style="position: absolute; left: 525px;
+    top: 130px;
+    padding-right: 100px;
+    padding-left: 15px;
+    overflow-x: hidden;
+    height: 185px;
+    width: 500px; visibility: hidden; text-align: justify;">
+
+This page allows you to set whether the DJI server can access your personal information below. Some app features will not be available if you deny DJI server access. You can change information access authorization settings at any time in the app's settings.
+<br><br>
+<strong>Rough Location Information</strong>
+<br>
+Used for no-fly database update and other features. The MG app will not be available if this feature is turned off.
+<br><br>
+<strong>DJI Device SN</strong>
+<br>
+When user device activation, login registration, data interface request, etc. are turned off, you will not be able to use the management platform related services or compute the task area.
+<br><br>
+<strong>GNSS Information</strong>
+<br>
+RC and DJI device GNSS information for third-party map positioning. When turned off, mapping, task execution, real-time monitoring, and task area computation will not be available.
+
+<img src="images/disable.png" id="enab_1" style= "position: absolute;left: 530px;
+    top: 130px; height: 30px;" draggable="false"/>
+
+<img src="images/disable.png" id="enab_2" style= "position: absolute;left: 530px;
+    top: 210px; height: 30px;" draggable="false"/>
+
+<img src="images/disable.png" id="enab_3" style= "position: absolute;left: 530px;
+    top: 315px; height: 30px;" draggable="false"/>
+
+<img src="images/transbox.png" id="enab_tb1" style="position: absolute; left: 530px; top: 130px; height: 25px; width: 50px; border: 2px dashed red; border-radius: 20px; visibility: ;" draggable="false" onclick="enab1()" />
+
+<img src="images/transbox.png" id="enab_tb2" style="position: absolute; left: 530px; top: 210px; height: 25px; width: 50px; border: 2px dashed red; border-radius: 20px; visibility: hidden;" draggable="false" onclick="enab2()" />
+
+<img src="images/transbox.png" id="enab_tb3" style="position: absolute; left: 530px; top: 315px; height: 25px; width: 50px; border: 2px dashed red; border-radius: 20px; visibility: hidden;" draggable="false" onclick="enab3()" />
+
+</div>
+
+<img src="images/transbox.png" id="enab_tb4" style="position: absolute; left: 750px; top: 325px; height: 35px; width: 145px; border: 2px dashed red; visibility: hidden;" draggable="false" onclick="enab4()" />
+
+<img src="images/transbox.png" id="go_tb" style="position: absolute; left: 760px;
+    top: 140px;
+    height: 128px; border-radius: 80px;
+    border: 0px dashed red; visibility: hidden; cursor: pointer;" draggable="false" onclick="go_next()" />
+
+
+<div id="improve_text" style="position: absolute; left: 525px;
+    top: 130px;
+    padding-right: 15px;
+    padding-left: 15px;
+    overflow-x: hidden;
+    height: 185px;
+    width: 565px; visibility: hidden; text-align: justify;">
+
+Product Improvement Plan e to the DJI product improvement plan. Through this plan, you will provide us with your DJI mavic in, mobile device information, and diagnosis and usage data to help us provide you with better and services. When turned off, product update, error reporting, statistical data, and other service be available. You can cancel participation in the plan in the app's settings at any time.
+
+</div>
+
+<img src="images/transbox.png" id="improve_tb2" style="position: absolute; left: 580px; top: 320px; width: 232px; height: 58px; visibility: hidden; border: 2px dashed red;" onclick="submit_improve()">
+
+<img src="images/transbox.png" id="plan_tb2" style="position: absolute; left: 530px; top: 352px; width: 90px; height: 30px; border-radius: 40px 0px 0px 40px; visibility: hidden; border: 2px dashed lime;" onclick="submit_plan()">
+
+<img src="images/transbox.png" id="fly_tb1" style="position: absolute; left: 990px; top: 272px; width: 150px; height: 29px; visibility: hidden; border: 2px dashed lime;" onclick="fly_miss()">
+
+
+<!--
+-->
+ 
+<!-- <img src="images/remote3.png" id="remotewithoutanti" style= "position: absolute;     left: 950px; 
+    top: 350px;
+    height: 190px; visibility:   ;
+"draggable="false"/>
+
+
+<img src="images/remote2.png" id="remoteopened" style= "position: absolute; left: 950px;
+    top: 350px;
+    height: 190px; visibility:  hidden; ;
+"draggable="false"/>
+
+
+
+
+<img src="images/anti1.png" id="anti1last" style= "position: absolute; left: 994px;
+    top: 355px;
+    height: 68px; transform: rotate(0deg); transform-origin: bottom; visibility:  ;
+"draggable="false"/>
+
+<img src="images/anti2.png" id="anti2last" style= "position: absolute; left: 1070px;
+    top: 355px; height: 68px; transform: rotate(-0deg); transform-origin: bottom; visibility:  ;
+"draggable="false"/>-->
+
+
+<img src="images/remote1.png" id="remotecloselast" style= "position: absolute; left: 950px;
+    top: 350px;
+    height: 190px; visibility:  hidden;
+"draggable="false"/>
+
+<img src="images/remote4.png" id="remotezoombig_last" style= "position: absolute;     left: 520px;
+    top: -160px;
+    height: 755px; visibility:   ;
+"draggable="false"/>
+
+
+
+<img src="images/zoombatterywire.png" id="platezoomlast" style= "position: absolute;  display: none; left: 465px;
+  top: 175px;
+  height: 420px;
+  border: 5px solid white;
+  border-radius: 215px;" />
+
+
+
+<img src="images/battryzoomup.png" id="lighton_battrylast" style= "position: absolute; left: 631px;
+    top: 350px;
+    height: 74.5px;
+    width: 158px;display: none;
+"draggable="false"/>
+
+<img src="images/transbox.png" id="platezoomlast_tb" style= "position: absolute;left: 653px;
+    top: 369px;
+    border: 4px dashed #ff2414;
+    height: 42px;
+    width: 30px;
+    transform: rotate(75deg); visibility: hidden;
+"draggable="false"/ onclick="platelast_tb()">
+
+<img src="images/transbox.png" id="remotezoomouttb_last" style= "position: absolute;left: 530px;
+    top: 100px;
+    border: 4px dashed lime;
+    height: 485px;
+    width: 660px; visibility: hidden;
+"draggable="false"/ onclick="zoomoutlast()">
+
+<img src="images/transbox.png" id="remotecloseanti_last" style= "position: absolute;left: 940px;
+    top: 340px;
+    border: 4px dashed lime;
+    height: 78px;
+    width: 185px; visibility: hidden;
+"draggable="false"/ onclick="close_anti_last()">
+
+
+
+
+<div id="step1_last" class="step" style="position: absolute; left: 875px;
+    top: 533px;
+    height: 30px;
+    width: 185px; display: none; " >
+	<span style="position: absolute; left: 10px; top: 7px; font-size: 18px; font-weight: bold;">
+		Click on Next button.</span>
+</div>
+
+<span class="blink_me" id="step1_arwlast" style="position: absolute; font-size: 40px; left: 1085px; top: 525px; color: #ff0000; visibility: hidden;" ><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+ 
+ 
+
+<img src="images/transbox.png" id="zoomscreen2_tb" style= "position: absolute; left: 790px;
+    top: 330px;
+    height: 40px;
+    width: 72px;
+    border: 2px dashed #ff00e0; visibility: hidden;
+"draggable="false" onclick="zoom_screen2()" />
+
+<img src="images/transbox.png" id="zoomscreen3_tb" style= "position: absolute; left: 790px;
+    top: 325\px;
+    height: 40px;
+    width: 72px;
+    border: 2px dashed #ff00e0; visibility: hidden;
+"draggable="false" onclick="zoom_screen3()" />
+
+<!-- Steps Start here -->
+<!-- ================ -->
+<div id="step4_1" class="step" style=" position: absolute; left: 810px; top: 240px; height: 55px; width: 180px; display: none; " >
+
+    <span style="position: absolute; left: 5px; top: 7px; font-size: 18px; font-weight: bold;">Click on transmitter to see the zoom view.</span>
+
+</div>
+
+<span class="blink_me" id="step4_arw1" style="position: absolute;
+    font-size: 40px;
+   	left: 890px;
+    top: 300px;
+    color: #ff0000;
+    visibility: hidden;" ><strong><i class="fa fa-arrow-down"></i></strong></span>    
+
+
+<div id="step4_2" class="step" style=" position: absolute; left: 710px;
+    top: 200px; height: 55px; width: 180px; display: none; " >
+
+    <span style="position: absolute; left: 5px; top: 7px; font-size: 18px; font-weight: bold;">Click on power button to switch it on.</span>
+
+</div>
+
+<span class="blink_me" id="step4_arw2" style="position: absolute;
+    font-size: 40px;
+   	left: 790px;
+    top: 255px;
+    color: #ff0000;
+    visibility: hidden;" ><strong><i class="fa fa-arrow-down"></i></strong></span> 
+
+
+<div id="step4_3" class="step" style=" position: absolute; left: 820px; top: 240px; height: 55px; width: 180px; display: none; " >
+
+    <span style="position: absolute; left: 5px; top: 7px; font-size: 18px; font-weight: bold;">Click on transmitter to see the zoom view.</span>
+
+</div>
+
+<span class="blink_me" id="step4_arw3" style="position: absolute;
+    font-size: 40px;
+   	left: 890px;
+    top: 300px;
+    color: #ff0000;
+    visibility: hidden;" ><strong><i class="fa fa-arrow-down"></i></strong></span> 
+
+
+<div id="step4_4" class="step" style=" position: absolute; left: 760px;
+    top: 415px;
+    height: 55px;
+    width: 130px; display: none; " >
+
+    <span style="position: absolute; left: 5px; top: 7px; font-size: 18px; font-weight: bold;">Click on start button.</span>
+
+</div>
+
+<span class="blink_me" id="step4_arw4" style="position: absolute;
+    font-size: 40px;
+   	left: 810px;
+    top: 370px;
+    color: #ff0000;
+    visibility: hidden;" ><strong><i class="fa fa-arrow-up"></i></strong></span>
+
+
+<div id="step4_5" class="step" style=" position: absolute; left: 760px;
+    top: 415px;
+    height: 55px;
+    width: 130px; display: none; " >
+
+    <span style="position: absolute; left: 5px; top: 7px; font-size: 18px; font-weight: bold;">Click on next button.</span>
+
+</div>
+
+<span class="blink_me" id="step4_arw5" style="position: absolute;
+    font-size: 40px;
+   	left: 810px;
+    top: 370px;
+    color: #ff0000;
+    visibility: hidden;" ><strong><i class="fa fa-arrow-up"></i></strong></span>
+
+
+
+<div id="step4_6" class="step" style=" position: absolute; left: 950px; top: -20px; height: 55px; width: 230px; display: none; " >
+
+    <span style="position: absolute; left: 5px; top: 7px; font-size: 18px; font-weight: bold;">After read User Agreement click on agree button.</span>
+
+</div>
+
+<span class="blink_me" id="step4_arw6" style="position: absolute;
+    font-size: 40px;
+   	left: 1075px;
+    top: 35px;
+    color: #ff0000;
+    visibility: hidden;" ><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+
+<div id="step4_7" class="step" style=" position: absolute; left: 770px;
+    top: 15px; height: 50px;
+    width: 285px; display: none; " >
+
+    <span style="position: absolute; left: 5px; top: 7px; font-size: 18px; font-weight: bold;">Scroll and select India Country option given below.</span>
+
+</div>
+
+<span class="blink_me" id="step4_arw7" style="position: absolute;
+    font-size: 40px;
+   	    left: 895px;
+    top: 65px;
+    color: #ff0000;
+    visibility: hidden;" ><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+
+<div id="step4_8" class="step" style=" position: absolute; left: 1020px;
+    top: 205px;
+    height: 50px;
+    width: 140px; display: none; " >
+
+    <span style="position: absolute; left: 5px; top: 7px; font-size: 18px; font-weight: bold;">Fill all signup details.</span>
+
+</div>
+
+<span class="blink_me" id="step4_arw8" style="position: absolute;
+    font-size: 40px;
+   	    left: 975px;
+    top: 205px;
+    color: #ff0000;
+    visibility: hidden;" ><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+
+<div id="step4_9" class="step" style=" position: absolute; left: 1020px;
+        top: 190px;
+    height: 75px;
+    width: 140px; display: none; " >
+
+    <span style="position: absolute; left: 5px; top: 7px; font-size: 18px; font-weight: bold;">Fill sign in details that fill last time.</span>
+
+</div>
+
+<span class="blink_me" id="step4_arw9" style="position: absolute;
+    font-size: 40px;
+   	    left: 975px;
+    top: 205px;
+    color: #ff0000;
+    visibility: hidden;" ><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+
+<div id="step4_10" class="step" style=" position: absolute; left: 950px;
+    top: 175px;
+    height: 50px;
+    width: 140px; display: none; " >
+
+    <span style="position: absolute; left: 5px; top: 7px; font-size: 18px; font-weight: bold;">Click on <b>Go</b> button.</span>
+
+</div>
+
+<span class="blink_me" id="step4_arw10" style="position: absolute;
+    font-size: 40px; left: 910px; top: 175px; color: #ff0000; visibility: hidden;" ><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+
+<div id="step4_11" class="step" style=" position: absolute; left: 950px;
+    top: 175px;
+    height: 50px;
+    width: 140px; display: none; " >
+
+    <span style="position: absolute; left: 5px; top: 7px; font-size: 18px; font-weight: bold;">Click on <b>GS RTK</b> option.</span>
+
+</div>
+
+<span class="blink_me" id="step4_arw11" style="position: absolute;
+    font-size: 40px; left: 910px; top: 175px; color: #ff0000; visibility: hidden;" ><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+
+<div id="step4_12" class="step" style=" position: absolute; left: 985px;
+    top: 225px;
+    height: 50px;
+    width: 140px; display: none; " >
+
+    <span style="position: absolute; left: 5px; top: 7px; font-size: 18px; font-weight: bold;">Click on <b>Always</b> button.</span>
+
+</div>
+
+<span class="blink_me" id="step4_arw12" style="position: absolute;
+    font-size: 40px; left: 1040px; top: 280px; color: #ff0000; visibility: hidden;" ><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+
+<div id="step4_13" class="step" style=" position: absolute; left: 985px; top: 0px; height: 95px; width: 180px; display: none;" >
+
+    <span style="position: absolute; left: 5px; top: 7px; font-size: 18px; font-weight: bold;">Scroll down <b> Enable</b> the option given below and click on Next button.</span>
+
+</div>
+
+<span class="blink_me" id="step4_arw13" style="position: absolute;
+    font-size: 40px; left: 1065px; top: 100px; color: #ff0000; visibility: hidden;" ><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+
+<div id="step4_14" class="step" style=" position: absolute;     left: 570px;
+    top: 430px;
+    height: 50px;
+    width: 240px; display: none; " >
+
+    <span style="position: absolute; left: 5px; top: 7px; font-size: 18px; font-weight: bold;">Click on Join User Improvement Plan button.</span>
+
+</div>
+
+<span class="blink_me" id="step4_arw14" style="position: absolute;
+    font-size: 40px; left: 680px;
+    top: 380px; color: #ff0000; visibility: hidden;" ><strong><i class="fa fa-arrow-up"></i></strong></span>
+
+
+<div id="step4_15" class="step" style=" position: absolute; left: 500px;
+    top: 425px; 
+    height: 50px;
+    width: 140px; display: none; " >
+
+    <span style="position: absolute; left: 5px; top: 7px; font-size: 18px; font-weight: bold;">Click on Plan button.</span>
+
+</div>
+
+<span class="blink_me" id="step4_arw15" style="position: absolute;
+    font-size: 40px; left: 560px; top: 380px; color: #ff0000; visibility: hidden;" ><strong><i class="fa fa-arrow-up"></i></strong></span>
+
+
+<div id="step4_16" class="step" style=" position: absolute; left: 985px;
+    top: 175px;
+    height: 50px;
+    width: 140px; display: none; " >
+
+    <span style="position: absolute; left: 5px; top: 7px; font-size: 18px; font-weight: bold;">Click on Go Fly button.</span>
+
+</div>
+
+<span class="blink_me" id="step4_arw16" style="position: absolute;
+    font-size: 40px; left: 1040px; top: 227px; color: #ff0000; visibility: hidden;" ><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+<!-- Steps End Here -->
+
+
+<!--Blinking arrowcubox  -->
+
+<input type="button" id="nextlast" style="position:absolute; left: 1124px;
+    top: 532px; cursor:pointer; font-size: 19px; background-color: #501b26; visibility:hidden; font-family: 'Acme', sans-serif; padding-top: 5px; color:  #FFF; border: 3px solid white; padding-bottom: 5px;" value="&nbsp;Next&nbsp;" onclick=""/>
+
+
+
+</div> 
+
+
+<!-- ==============================CANVAS5b=========================== -->
+
+ <!-- Scene 5b -->
+
+<div class="simsubscreen" id="canvas5b" style="visibility: hidden; background-image: url(images/b4.jpg); background-position: bottom;" >
+
+
+<!-------------------------MCQ canvas5-------------------------------->
+
+
+<div id="question2" style=" position: absolute; width: 845px; height: 412px; left: 155px; top: 85px;padding: 10px; border: 7px solid white; background-image: linear-gradient(45deg, #ffd8cb, #e9e4f0); " >
+
+<span style="font-size: 30px; font-weight: bold; margin-left: 320px; margin-right: 150px;" > <u>Test Your Memory</u></span>
+
+<span style="font-size: 22px; font-weight: bold; position: absolute; top: 20px;
+    left: 655px;" > Total Marks:</span>
+
+<span id="mrk_02" style="font-size: 22px; font-weight: bold; position: absolute; top: 20px; left: 790px; visibility: ;" > </span>
+
+<span style="position: absolute; left: 50px; top: 80px; font-size: 24px; font-weight: bold;" >Q2.</span>
+
+<span style="position: absolute; left: 90px; top: 80px; font-size: 24px; font-weight: bold;">________ is the taking of photographs of the ground from an elevated position.
+</span>
+
+    <br>
+
+     <span  style="position: absolute; left: 45px; top: 160px; font-size: 24px;"><strong> A </strong>&nbsp;&nbsp;<input type="radio" name="q2" id="optionA2" value="Incorrect Answer">&nbsp;Photography<br></span>
+
+       <span style="position: absolute; left: 455px; top: 160px; font-size: 24px;"><strong> B</strong> &nbsp;&nbsp;<input type="radio" name="q2" id="optionB2" value="Incorrect Answer">&nbsp;Satellite Image<br></span>
+
+      <span style="position: absolute; left: 45px; top: 260px; font-size: 24px;"><strong>C </strong>&nbsp;&nbsp;<input type="radio" name="q2" id="optionC2" value="Correct Answer">&nbsp;Aerial photography<br></span>
+
+      <span style="position: absolute; left: 455px; top: 260px; font-size: 24px;"><strong> D</strong> &nbsp;&nbsp;<input type="radio" name="q2" id="optionD2" value="Incorrect Answer">&nbsp;Image<br></span>
+
+    <div id="ans_can8" style= "color:red; left: 330px; top: 338px; position: absolute; font-size: 30px; font-weight: bold;">
+    </div>
+
+    <div id="got_mrkcan8" style= "color:black; left: 305px; top: 387px; position: absolute; font-size: 22px; font-weight: bold; visibility: hidden;">Congrats !! You get "1" mark.
+    </div>
+
+    <input type="button" id="showans_can8" style="position:absolute; left: 640px;
+    top: 340px; cursor:pointer; font-size: 19px; background-color: #501b26; font-family: 'Acme', sans-serif; padding-top: 5px; color:  #FFF; border: 3px solid white; padding-bottom: 5px;" value="&nbsp;Submit&nbsp;" onclick="ansshw_c8()"/>
+
+    <input type="button" id="nextButton8" style="position:absolute; left: 770px;
+    top: 370px; cursor:pointer; font-size: 19px; background-color: #501b26; visibility:hidden; font-family: 'Acme', sans-serif; padding-top: 5px; color:  #FFF; border: 3px solid white; padding-bottom: 5px;" value="&nbsp;Next&nbsp;" onclick="flyquestion()"/>
+
+
+</div>
+
+<!--------------------------
+
+    <input type="button" id="nextButton55" style="position:absolute; left: 770px;
+    top: 370px; cursor:pointer; font-size: 19px; background-color: #501b26; visibility:hidden; font-family: 'Acme', sans-serif; padding-top: 5px; color:  #FFF; border: 3px solid white; padding-bottom: 5px;" value="&nbsp;Next&nbsp;" onclick="nextb tn3b()"/>
+
+    <input type="button" id="showans" style="position:absolute; left: 640px;
+    top: 340px; cursor:pointer; font-size: 19px; background-color: #501b26; font-family: 'Acme', sans-serif; padding-top: 5px; color:  #FFF; border: 3px solid white; padding-bottom: 5px;" value="&nbsp;Submit&nbsp;" onclick="ansshw_c4()"/>
+
+</div>------------------------------->
+
+<!-------------------------MCQ canvas5-------------------------------->
+
+</div>
+
+
+
+ <!-- Scene 5 -->
+
+
+<div class="simsubscreen" id="canvas5" style="visibility: hidden; background-image: url(images/b5.jpg);    background-position: bottom; overflow: hidden;" >
+
+  <audio id="drn_aud1">
+        <source src="images/drone_startup.mp3" type="audio/mpeg">
+  </audio>
+
+
+  <!-- <div id="note_esc" style=" position: absolute; left: 0px; top: 0px; height: 609px; width: 1199px; font-size: 21px; opacity: 0.4; background-color: black; 
+  " >-->
+
+  <!-- <img src="images/rc.png" id="only_rc" style= "position: absolute; left: 820px; 
+    top: 350px;
+    height: 185px;
+"draggable="false"/>-->
+
+<img src="images/dronefirstpage.png" id="drone_vifly" style= "position: absolute; left: 115px; top: 395px; height: 200px;" draggable="false"/>
+
+<img src="images/rc_wouthandle.png" id="only_rc" style= "position: absolute; left: 625px;
+    top: 370px;
+    height: 305px;
+"draggable="false"/>
+
+<img src="images/hleft.png" id="left_rc" style= "position: absolute; left: 625px;
+    top: 370px;
+    height: 305px;
+"draggable="false"/>
+
+<img src="images/hright.png" id="right_rc" style= "position: absolute; left: 625px;
+    top: 370px;
+    height: 305px;
+"draggable="false"/>
+
+<img src="images/handthumb3.png" id="hand1_can5" style=
+"position: absolute;
+     left: 615px;
+    top: 378px;
+    height: 255px; transform: rotate(0deg);
+ visibility: hidden;
+"draggable="false"/>
+
+<img src="images/handthumb4.png" id="hand2_can5" style=
+"position: absolute;
+     left: 893px;
+    top: 378px;
+    height: 255px; transform: rotate(0deg);
+ visibility: hidden;
+"draggable="false"/>
+
+
+<img src="images/handthumb3.png" id="hand3_can5" style=
+"position: absolute;
+     left: 615px;
+    top: 378px;
+    height: 255px; transform: rotate(0deg);
+ visibility: hidden;
+"draggable="false"/>
+
+<img src="images/handthumb4.png" id="hand4_can5" style=
+"position: absolute;
+     left: 893px;
+    top: 378px;
+    height: 255px; transform: rotate(0deg);
+ visibility: hidden;
+"draggable="false"/>
+
+<img src="images/handthumb3.png" id="hand5_can5" style=
+"position: absolute;
+     left: 615px;
+    top: 378px;
+    height: 255px; transform: rotate(0deg);
+ visibility: hidden;
+"draggable="false"/>
+
+<img src="images/arowdwn.png" class="blink_me" id="arw1_can5" style=
+"position: absolute;
+     left: 623px;
+    top: 370px;
+    height: 75px; transform: rotate(-50deg);
+ visibility: hidden;
+"draggable="false"/>
+
+<img src="images/arowdwn.png" class="blink_me" id="arw2_can5" style=
+"position: absolute;
+     left: 955px;
+    top: 370px;
+    height: 75px; transform: rotate(50deg);
+ visibility: hidden;
+"draggable="false"/>
+
+
+<img src="images/arowdwn.png" class="blink_me" id="arw3_can5" style=
+"position: absolute;
+     left: 623px;
+    top: 370px;
+    height: 75px; transform: rotate(-180deg);
+ visibility: hidden;
+"draggable="false"/>
+
+<img src="images/arowdwn.png" class="blink_me" id="arw4_can5" style=
+"position: absolute;
+     left: 955px;
+    top: 370px;
+    height: 75px; transform: rotate(-180deg);
+ visibility: hidden;
+"draggable="false"/>
+
+<img src="images/arowdwn.png" class="blink_me" id="arw5_can5" style=
+"position: absolute;
+     left: 955px;
+    top: 370px;
+    height: 75px; transform: rotate(0deg);
+ visibility: hidden;
+"draggable="false"/>
+
+<img src="images/arowdwn.png" class="blink_me" id="arw6_can5" style=
+"position: absolute;
+     left: 623px;
+    top: 370px;
+    height: 75px; transform: rotate(90deg);
+ visibility: hidden;
+"draggable="false"/>
+
+<img src="images/arowdwn.png" class="blink_me" id="arw7_can5" style=
+"position: absolute;
+     left: 623px;
+    top: 370px;
+    height: 75px; transform: rotate(-90deg);
+ visibility: hidden;
+"draggable="false"/>
+
+<img src="images/scr14.png" id="screenzoombig14" style= "position: absolute; left: 506px;
+    top: 36px; height: 313px; width: 637px; visibility:   ;
+"draggable="false"/>
+
+<div id="slidediv1" style="position: absolute; left: 701px; top: 36px; height: 313px; width: 437px; overflow: hidden; border:0px solid red; visibility: hidden;">
+
+<img src="images/scr15a.png" id="screenzoombig14" style= "position: absolute; left: -190px; top: 0px; height: 313px; width: 637px; visibility:   ;
+"draggable="false"/>
+<span style="position: absolute; left: 90px; top: 170px; font-weight: bold; color: #f00; font-size: 12px;">Slide to Take Off</span>
+
+<img src="images/scr15b.png" id="slideimg1" style= "position: absolute; left: -310px; top: 0px; height: 313px; width: 637px; visibility:   ;
+"draggable="false"/>	
+
+</div>
+<img id="slidediv2" src="images/scr15.png" id="screenzoombig14" style= "position: absolute; left: 506px;
+    top: 36px; height: 313px; width: 637px; visibility: hidden;"draggable="false"/>
+
+<video id="myVideo1" style="position: absolute; left: 486px; top: 0px; height: 360px; width: 675px; visibility: hidden;">
+  <source src="images/downtoup.mp4" type="video/mp4">
+</video>
+
+<video id="myVideo2" style="position: absolute; left: 486px; top: 0px; height: 360px; width: 675px; visibility: hidden;">
+  <source src="images/goforward.mp4" type="video/mp4">
+</video>
+
+<video id="myVideo3" style="position: absolute; left: 486px; top: 0px; height: 360px; width: 675px; visibility: hidden;">
+  <source src="images/goback.mp4" type="video/mp4">
+</video>
+
+<video id="myVideo4" style="position: absolute; left: 486px; top: 0px; height: 360px; width: 675px; visibility: hidden;">
+  <source src="images/antiround2.mp4" type="video/mp4">
+</video>
+
+<video id="myVideo5" style="position: absolute; left: 486px; top: 0px; height: 360px; width: 675px; visibility: hidden;">
+  <source src="images/round2.mp4" type="video/mp4">
+</video>
+
+<video id="myVideo6" style="position: absolute; left: 486px; top: 0px; height: 360px; width: 675px; visibility: hidden;">
+  <source src="images/uptodown.mp4" type="video/mp4">
+</video>
+
+
+<img src="images/scr14up.png" id="top_screen" style= "position: absolute; left: 506px;
+    top: 36px; height: 313px; width: 637px; visibility: hidden;
+"draggable="false"/>
+
+<img src="images/screenzoomopen.png" id="screenzoombig1" style= "position: absolute; left: 460px;
+    top: 15px; height: 355px; visibility:   ;
+"draggable="false"/>
+
+<img src="images/videoup.jpg" id="" style= "position: absolute; left: 408px;
+    top: 0px;
+    height: 30px;
+    width: 795px;
+"draggable="false"/>
+
+
+<img src="images/transbox.png" id="handmove_tb1" style= "position: absolute; left: 680px;
+    top: 400px;
+    height: 90px;
+    width: 282px;
+    border-radius: 50px;
+    border: 4px dashed red; visibility: hidden;
+"draggable="false" onclick="handmove1()">
+
+<img src="images/transbox.png" id="slide_tb1" style= "position: absolute; left: 736px;
+    top: 185px;
+    height: 53px;
+    width: 177px; visibility: hidden; border: 0px dashed red;
+"draggable="false" onclick="slide11()">
+
+
+<!-- Steps Start here -->
+<!-- ================ -->
+
+<div id="step5_1" class="step" style=" position: absolute; left: 750px;
+    top: 515px;
+    height: 50px;
+    width: 140px; display: none; " >
+
+    <span style="position: absolute; left: 5px; top: 7px; font-size: 18px; font-weight: bold;">Click on Throttle to start drone.</span>
+
+</div>
+
+<span class="blink_me" id="step5_arw1" style="position: absolute;
+    font-size: 40px; left: 805px; top: 470px; color: #ff0000; visibility: hidden;" ><strong><i class="fa fa-arrow-up"></i></strong></span>
+
+
+<div id="step5_2" class="step" style=" position: absolute; left: 985px;
+    top: 185px;
+    height: 50px;
+    width: 140px; display: none; " >
+
+    <span style="position: absolute; left: 5px; top: 7px; font-size: 18px; font-weight: bold;">Click on slider to fly the drone.</span>
+
+</div>
+
+<span class="blink_me" id="step5_arw2" style="position: absolute;
+    font-size: 40px; left: 950px; top: 190px; color: #ff0000; visibility: hidden;" ><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+
+<div id="step5_3" class="step" style=" position: absolute; left: 485px;
+    top: 405px;
+    height: 75px;
+    width: 140px; display: none; " >
+
+    <span style="position: absolute; left: 5px; top: 7px; font-size: 18px; font-weight: bold;">Throttle move Slowly Slowly to fly up.</span>
+
+</div>
+
+<span class="blink_me" id="step5_arw3" style="position: absolute;
+    font-size: 40px; left: 1040px; top: 227px; color: #ff0000; visibility: hidden;" ><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+<div id="step5_4" class="step" style=" position: absolute; left: 1025px;
+    top: 405px;
+    height: 75px;
+    width: 140px; display: none; " >
+
+    <span style="position: absolute; left: 5px; top: 7px; font-size: 18px; font-weight: bold;">Throttle move Slowly Slowly to fly forward.</span>
+
+</div>
+
+<span class="blink_me" id="step5_arw4" style="position: absolute;
+    font-size: 40px; left: 1040px; top: 227px; color: #ff0000; visibility: hidden;" ><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+
+<div id="step5_5" class="step" style=" position: absolute; left: 1025px;
+    top: 405px;
+    height: 75px;
+    width: 140px; display: none; " >
+
+    <span style="position: absolute; left: 5px; top: 7px; font-size: 18px; font-weight: bold;">Throttle move Slowly Slowly to fly backward.</span>
+
+</div>
+
+<span class="blink_me" id="step5_arw5" style="position: absolute;
+    font-size: 40px; left: 1040px; top: 227px; color: #ff0000; visibility: hidden;" ><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+
+<div id="step5_6" class="step" style=" position: absolute; left: 475px;
+    top: 440px;
+    height: 75px;
+    width: 185px; display: none; " >
+
+    <span style="position: absolute; left: 5px; top: 7px; font-size: 18px; font-weight: bold;">Throttle move Slowly Slowly to rotate anticlockwise.</span>
+
+</div>
+
+<span class="blink_me" id="step5_arw6" style="position: absolute;
+    font-size: 40px; left: 1040px; top: 227px; color: #ff0000; visibility: hidden;" ><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+<div id="step5_7" class="step" style=" position: absolute; left: 505px;
+    top: 440px;
+    height: 75px;
+    width: 140px; display: none; " >
+
+    <span style="position: absolute; left: 5px; top: 7px; font-size: 18px; font-weight: bold;">Throttle move Slowly Slowly to rotate clockwise.</span>
+
+</div>
+
+<span class="blink_me" id="step5_arw7" style="position: absolute;
+    font-size: 40px; left: 1040px; top: 227px; color: #ff0000; visibility: hidden;" ><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+
+
+<!-- Steps End Here -->
+<!--Blinking arrowcubox  -->
+
+<input type="button" id="nextbtn5" style="position:absolute; left: 1124px;
+    top: 532px; cursor:pointer; font-size: 19px; background-color: #501b26; visibility:hidden; font-family: 'Acme', sans-serif; padding-top: 5px; color:  #FFF; border: 3px solid white; padding-bottom: 5px;" value="&nbsp;Next&nbsp;" onclick="nextbtn5()"/>
+
+
+</div>
+
+<!-- ==============================CANVAS5=========================== -->
+
+
+<!-- ==============================CANVAS8=========================== -->
+
+ <!-- Scene 8 -->
+
+<div class="simsubscreen" id="canvas6a" style="visibility:hidden; background-image: url(images/b4.jpg);" >
+
+<!-------------------------MCQ canvas8-------------------------------->
+
+<div id="question3" style=" position: absolute; width: 845px; height: 412px; left: 155px; top: 85px;padding: 10px; border: 7px solid white; background-image: linear-gradient(45deg, #ffd8cb, #e9e4f0); " >
+
+<span style="font-size: 30px; font-weight: bold; margin-left: 320px; margin-right: 150px;" > <u>Test Your Memory</u></span>
+
+<span style="font-size: 22px; font-weight: bold; position: absolute; top: 20px;
+    left: 655px;" > Total Marks:</span>
+
+<span id="mrk_03" style="font-size: 22px; font-weight: bold; position: absolute; top: 20px; left: 790px; visibility: ;" > </span>
+
+<span style="position: absolute; left: 50px; top: 80px; font-size: 24px; font-weight: bold;" >Q3.</span>
+
+<span style="position: absolute; left: 90px; top: 80px; font-size: 24px; font-weight: bold;">_______ is first method of remote sensing.
+</span>
+
+    <br>
+
+     <span  style="position: absolute; left: 45px; top: 160px; font-size: 24px;"><strong> A </strong>&nbsp;&nbsp;<input type="radio" name="q3" id="optionA3" value="Correct Answer">&nbsp;Kite<br></span>
+
+       <span style="position: absolute; left: 455px; top: 160px; font-size: 24px;"><strong> B</strong> &nbsp;&nbsp;<input type="radio" name="q3" id="optionB3" value="Incorrect Answer">&nbsp;Aerial photography<br></span>
+
+      <span style="position: absolute; left: 45px; top: 260px; font-size: 24px;"><strong>C </strong>&nbsp;&nbsp;<input type="radio" name="q3" id="optionC3" value="Incorrect Answer">&nbsp;Drone<br></span>
+
+      <span style="position: absolute; left: 455px; top: 260px; font-size: 24px;"><strong> D</strong> &nbsp;&nbsp;<input type="radio" name="q3" id="optionD3" value="Incorrect Answer">&nbsp;Satellite<br></span>
+
+    <div id="ans_can9" style= "color:red; left: 330px; top: 338px; position: absolute; font-size: 30px; font-weight: bold;">
+    </div>
+
+    <div id="got_mrkcan9" style= "color:black; left: 305px; top: 387px; position: absolute; font-size: 22px; font-weight: bold; visibility: hidden;">Congrats !! You get "1" mark.
+    </div>
+
+    <input type="button" id="showans_can9" style="position:absolute; left: 640px;
+    top: 340px; cursor:pointer; font-size: 19px; background-color: #501b26; font-family: 'Acme', sans-serif; padding-top: 5px; color:  #FFF; border: 3px solid white; padding-bottom: 5px;" value="&nbsp;Submit&nbsp;" onclick="ansshw_c9()"/>
+
+    <input type="button" id="nextButton9" style="position:absolute; left: 770px;
+    top: 370px; cursor:pointer; font-size: 19px; background-color: #501b26; visibility:hidden; font-family: 'Acme', sans-serif; padding-top: 5px; color:  #FFF; border: 3px solid white; padding-bottom: 5px;" value="&nbsp;Next&nbsp;" onclick="nextbtn6()"/>
+
+
+</div>
+
+<!-------------------------MCQ canvas8-------------------------------->
+
+
+</div>
+
+
+ <!-- Scene 6 -->
+
+
+<div class="simsubscreen" id="canvas6" style="visibility: hidden; background-image: url(images/b5.jpg);    background-position: bottom;" >
+
+  <!-- <audio id="drn_aud1">
+        <source src="images/drone_startup.mp3" type="audio/mpeg">
+  </audio> -->
+
+
+  <!-- <div id="note_esc" style=" position: absolute; left: 0px; top: 0px; height: 609px; width: 1199px; font-size: 21px; opacity: 0.4; background-color: black; 
+  " >-->
+
+  <!-- <img src="images/rc.png" id="only_rc" style= "position: absolute; left: 820px; 
+    top: 350px;
+    height: 185px;
+"draggable="false"/>-->
+
+<!-- <img src="images/dronefirstpage.png" id="drone_vifly" style= "position: absolute; left: 115px; top: 395px; height: 200px;" draggable="false"/> -->
+
+<img src="images/rc_wouthandle.png" id="only_rc" style= "position: absolute; left: 625px;
+    top: 370px;
+    height: 305px;
+"draggable="false"/>
+
+<img src="images/hleft.png" id="left_rc" style= "position: absolute; left: 625px;
+    top: 370px;
+    height: 305px;
+"draggable="false"/>
+
+<img src="images/hright.png" id="right_rc" style= "position: absolute; left: 625px;
+    top: 370px;
+    height: 305px;
+"draggable="false"/>
+
+<!-- <img src="images/handthumb3.png" id="hand1_can5" style=
+"position: absolute;
+     left: 615px;
+    top: 378px;
+    height: 255px; transform: rotate(0deg);
+ visibility: hidden;
+"draggable="false"/>
+
+<img src="images/handthumb4.png" id="hand2_can5" style=
+"position: absolute;
+     left: 893px;
+    top: 378px;
+    height: 255px; transform: rotate(0deg);
+ visibility: hidden;
+"draggable="false"/>
+
+
+<img src="images/handthumb3.png" id="hand3_can5" style=
+"position: absolute;
+     left: 615px;
+    top: 378px;
+    height: 255px; transform: rotate(0deg);
+ visibility: hidden;
+"draggable="false"/> -->
+
+
+<img src="images/arowdwn.png" class="blink_me" id="arw1_can5" style=
+"position: absolute;
+     left: 623px;
+    top: 370px;
+    height: 75px; transform: rotate(-50deg);
+ visibility: hidden;
+"draggable="false"/>
+
+<img src="images/arowdwn.png" class="blink_me" id="arw2_can5" style=
+"position: absolute;
+     left: 955px;
+    top: 370px;
+    height: 75px; transform: rotate(50deg);
+ visibility: hidden;
+"draggable="false"/>
+
+
+<img src="images/arowdwn.png" class="blink_me" id="arw3_can5" style=
+"position: absolute;
+     left: 623px;
+    top: 370px;
+    height: 75px; transform: rotate(-180deg);
+ visibility: hidden;
+"draggable="false"/>
+
+<img src="images/arowdwn.png" class="blink_me" id="arw4_can5" style=
+"position: absolute;
+     left: 955px;
+    top: 370px;
+    height: 75px; transform: rotate(-180deg);
+ visibility: hidden;
+"draggable="false"/>
+
+<img src="images/arowdwn.png" class="blink_me" id="arw5_can5" style=
+"position: absolute;
+     left: 955px;
+    top: 370px;
+    height: 75px; transform: rotate(0deg);
+ visibility: hidden;
+"draggable="false"/>
+
+<img src="images/arowdwn.png" class="blink_me" id="arw6_can5" style=
+"position: absolute;
+     left: 623px;
+    top: 370px;
+    height: 75px; transform: rotate(90deg);
+ visibility: hidden;
+"draggable="false"/>
+
+<img src="images/arowdwn.png" class="blink_me" id="" style=
+"position: absolute;
+     left: 623px;
+    top: 370px;
+    height: 75px; transform: rotate(-90deg);
+ visibility: hidden;
+"draggable="false"/>
+
+<img src="images/scr16.png" id="screenzoombig16" style= "position: absolute; left: 506px;
+    top: 36px; height: 313px; width: 637px; visibility:   ;
+"draggable="false"/>
+
+<!-- <div id="slidediv1" style="position: absolute; left: 701px; top: 36px; height: 313px; width: 437px; overflow: hidden; border:0px solid red; visibility: hidden;"> -->
+
+<!-- <img src="images/scr15a.png" id="screenzoombig14" style= "position: absolute; left: -190px; top: 0px; height: 313px; width: 637px; visibility:   ;
+"draggable="false"/>
+<span style="position: absolute; left: 90px; top: 170px; font-weight: bold; color: #f00; font-size: 12px;">Slide to Take Off</span>
+
+<img src="images/scr15b.png" id="slideimg1" style= "position: absolute; left: -310px; top: 0px; height: 313px; width: 637px; visibility:   ;
+"draggable="false"/>	
+
+</div>
+<img id="slidediv2" src="images/scr15.png" id="screenzoombig14" style= "position: absolute; left: 506px;
+    top: 36px; height: 313px; width: 637px; visibility: hidden;"draggable="false"/>
+
+<video id="myVideo1" style="position: absolute; left: 486px; top: 0px; height: 360px; width: 675px; visibility: hidden;">
+  <source src="images/downtoup.mp4" type="video/mp4">
+</video>
+
+<video id="myVideo2" style="position: absolute; left: 486px; top: 0px; height: 360px; width: 675px; visibility: hidden;">
+  <source src="images/goforward.mp4" type="video/mp4">
+</video>
+
+<video id="myVideo3" style="position: absolute; left: 486px; top: 0px; height: 360px; width: 675px; visibility: hidden;">
+  <source src="images/goback.mp4" type="video/mp4">
+</video>
+
+<video id="myVideo4" style="position: absolute; left: 486px; top: 0px; height: 360px; width: 675px; visibility: hidden;">
+  <source src="images/antiround2.mp4" type="video/mp4">
+</video>
+
+<video id="myVideo5" style="position: absolute; left: 486px; top: 0px; height: 360px; width: 675px; visibility: hidden;">
+  <source src="images/round2.mp4" type="video/mp4">
+</video>
+
+<video id="myVideo6" style="position: absolute; left: 486px; top: 0px; height: 360px; width: 675px; visibility: hidden;">
+  <source src="images/uptodown.mp4" type="video/mp4">
+</video> -->
+
+<video id="myVideo7" style="position: absolute; left: 486px; top: 0px; height: 360px; width: 675px; visibility: hidden;">
+  <source src="images/zoomin.mp4" type="video/mp4">
+</video>
+
+<video id="myVideo8" style="position: absolute; left: 486px; top: 0px; height: 360px; width: 675px; visibility: hidden;">
+  <source src="images/zoomout.mp4" type="video/mp4">
+</video>
+
+<img src="images/scr14up.png" id="scr16up" style= "position: absolute; left: 506px;
+    top: 36px; height: 313px; width: 637px; visibility: hidden;
+"draggable="false"/>
+
+<img src="images/screenzoomopen.png" id="" style= "position: absolute; left: 460px;
+    top: 15px; height: 355px; visibility:   ;
+"draggable="false"/>
+
+<img src="images/videoup.jpg" id="" style= "position: absolute; left: 408px;
+    top: 0px;
+    height: 30px;
+    width: 795px;
+"draggable="false"/>
+
+
+<img src="images/hand7.png" id="hand7_can6" style="position: absolute;
+     left: 873px;
+    top: 148px;
+    height: 255px;
+    transform-origin: bottom;
+    transform: rotate(0deg);
+ visibility: hidden;" draggable="false"/>
+
+<img src="images/hand6.png" id="hand6_can6" style=
+"position: absolute;
+     left: 530px;
+    top: 148px;
+    height: 255px;
+    transform-origin: bottom; transform: rotate(0deg);
+ visibility: hidden;" draggable="false"/>
+
+
+<img src="images/transbox.png" id="handmovezoom_tb1" style= "position: absolute; left: 500px;
+    top: 32px;
+    height: 315px;
+    width: 642px;
+    border-radius: 20px;
+    border: 3px dashed red; visibility:  ;
+"draggable="false" onclick="handmove2()">
+
+
+<!-- Steps Start here -->
+<!-- ================ -->
+
+<div id="step6_1" class="step" style=" position: absolute; left: 700px; top: 395px; height: 50px; width: 240px; display: none; " >
+
+    <span style="position: absolute; left: 5px; top: 7px; font-size: 18px; font-weight: bold;">Click on transmitter screen to zoom in video.</span>
+
+</div>
+
+<span class="blink_me" id="step6_arw1" style="position: absolute;
+    font-size: 40px; left: 808px; top: 340px; color: #ff0000; visibility: hidden;" ><strong><i class="fa fa-arrow-up"></i></strong></span>
+
+<div id="step6_2" class="step" style=" position: absolute; left: 700px; top: 395px; height: 50px; width: 240px; display: none; " >
+
+    <span style="position: absolute; left: 5px; top: 7px; font-size: 18px; font-weight: bold;">We use inside to zoom out video.</span>
+
+</div>
+
+<span class="blink_me" id="step6_arw2" style="position: absolute;
+    font-size: 40px; left: 808px; top: 340px; color: #ff0000; visibility: hidden;" ><strong><i class="fa fa-arrow-up"></i></strong></span>
+<!-- Steps End Here -->
+
+
+<!--Blinking arrowcubox  -->
+
+<input type="button" id="nextbtn6" style="position:absolute; left: 1124px;
+    top: 532px; cursor:pointer; font-size: 19px; background-color: #501b26; visibility:hidden; font-family: 'Acme', sans-serif; padding-top: 5px; color:  #FFF; border: 3px solid white; padding-bottom: 5px;" value="&nbsp;Next&nbsp;" onclick="nextbtn7()"/>
+
+
+
+
+</div>
+
+
+
+<!-- ==============================CANVAS5=========================== -->
+
+
+<!-- ==============================CANVAS8=========================== -->
+
+ <!-- Scene 8 -->
+
+
+
+<div class="simsubscreen" id="canvas9" style="visibility:hidden; background-image: url(images/b4.jpg);" >
+
+  
+<!-------------------------MCQ canvas8-------------------------------->
+
+<div id="question4" style=" position: absolute; width: 845px; height: 412px; left: 155px; top: 85px;padding: 10px; border: 7px solid white; background-image: linear-gradient(45deg, #ffd8cb, #e9e4f0); " >
+
+<span style="font-size: 30px; font-weight: bold; margin-left: 320px; margin-right: 150px;" > <u>Test Your Memory</u></span>
+
+<span style="font-size: 22px; font-weight: bold; position: absolute; top: 20px;
+    left: 655px;" > Total Marks:</span>
+
+<span id="mrk_04" style="font-size: 22px; font-weight: bold; position: absolute; top: 20px; left: 790px; visibility: ;" > </span>
+
+<span style="position: absolute; left: 50px; top: 80px; font-size: 24px; font-weight: bold;" >Q4.</span>
+
+<span style="position: absolute; left: 90px; top: 80px; font-size: 24px; font-weight: bold;">Which is following types of photograph are used in Aerial photogrammetry?
+</span>
+
+    <br>
+
+     <span  style="position: absolute; left: 45px; top: 160px; font-size: 24px;"><strong> A </strong>&nbsp;&nbsp;<input type="radio" name="q4" id="optionA4" value="Correct Answer">&nbsp;Oblique<br></span>
+
+       <span style="position: absolute; left: 455px; top: 160px; font-size: 24px;"><strong> B</strong> &nbsp;&nbsp;<input type="radio" name="q4" id="optionB4" value="Incorrect Answer">&nbsp;Verical<br></span>
+
+      <span style="position: absolute; left: 45px; top: 260px; font-size: 24px;"><strong>C </strong>&nbsp;&nbsp;<input type="radio" name="q4" id="optionC4" value="Incorrect Answer">&nbsp;Tilt<br></span>
+
+      <span style="position: absolute; left: 455px; top: 260px; font-size: 24px;"><strong> D</strong> &nbsp;&nbsp;<input type="radio" name="q4" id="optionD4" value="Incorrect Answer">&nbsp;Horizontal<br></span>
+
+    <div id="ans_can10" style= "color:red; left: 330px; top: 338px; position: absolute; font-size: 30px; font-weight: bold;">
+    </div>
+
+    <div id="got_mrkcan10" style= "color:black; left: 305px; top: 387px; position: absolute; font-size: 22px; font-weight: bold; visibility: hidden;">Congrats !! You get "1" mark.
+    </div>
+
+    <input type="button" id="showans_can10" style="position:absolute; left: 640px;
+    top: 340px; cursor:pointer; font-size: 19px; background-color: #501b26; font-family: 'Acme', sans-serif; padding-top: 5px; color:  #FFF; border: 3px solid white; padding-bottom: 5px;" value="&nbsp;Submit&nbsp;" onclick="ansshw_c10()"/>
+
+    <input type="button" id="nextButton10" style="position:absolute; left: 770px;
+    top: 370px; cursor:pointer; font-size: 19px; background-color: #501b26; visibility:hidden; font-family: 'Acme', sans-serif; padding-top: 5px; color:  #FFF; border: 3px solid white; padding-bottom: 5px;" value="&nbsp;Next&nbsp;" onclick="bhu()"/>
+
+
+</div>
+
+<!-------------------------MCQ canvas8-------------------------------->
+
+
+</div>
+<!-- ==============================CANVAS8=========================== -->
+
+ <!-- Scene 8 -->
+
+
+
+<div class="simsubscreen" id="canvas10" style="visibility:hidden; background-image: url(images/b4.jpg);" >
+
+
+
+
+</div>
+
+<!-- ==============================CANVAS8=========================== -->
+
+<!-- ==============================CANVAS20=========================== -->
+
+ <!-- Scene 20-->
+
+
+
+<div class="simsubscreen" id="canvas20" style="visibility:hidden; background-image: url(images/b4.jpg);" >
+
+
+  <table  style="position: absolute; border: 1px solid white; height: 230px;     width: 1160px; left: 20px; top: 75px; color: black; background-color: white; font-weight: bold; " border="1">
+    <tr style="text-align: center; font-size: 20px;">
+      <td >
+        Question
+      </td>
+
+      <td>
+        Correct Answer
+      </td>
+
+    </tr>
+
+    <tr style=" font-size: 18px;">
+      <td style="padding-left: 10px; ">
+         Q1. Which following is not a platform of Aerial Photography?
+      </td>
+
+      <td style="text-align: center;">
+        Satellite
+      </td>
+
+    </tr>
+
+    <tr style=" font-size: 18px;">
+      <td style="padding-left: 10px;">
+         Q2. _______ is the taking of photographs of the ground from an elevated position.
+      </td>
+
+      <td style="text-align: center;">
+        Aerial Photography
+      </td>
+
+    </tr>
+
+
+    <tr style=" font-size: 18px;">
+      <td style="padding-left: 10px;">
+         Q3. _______ is first method of remote sensing.
+      </td>
+
+      <td style="text-align: center;">
+        Kite
+      </td>
+
+    </tr>
+
+
+    <tr style=" font-size: 18px;">
+      <td style="padding-left: 10px;">
+        Q4. Which is following types of photograph are used in Aerial photogrammetry?
+      </td>
+
+      <td style="text-align: center;">
+        Oblique
+      </td>
+
+    </tr>
+
+
+    <!-- <tr style=" font-size: 18px;">
+      <td style="padding-left: 10px;">
+        Q5. To move our drone to the right side, we should move direction stick to the _______.
+      </td>
+
+      <td style="text-align: center;">
+         Right
+      </td>
+
+    </tr> -->
+
+  </table>
+
+  <div style="position: absolute; font-weight: bold; left: 460px;
+    top: 360px; background-color: white; border: 1px solid black; height: 50px; width: 290px; font-size: 18px;"><span style="position: absolute;left: 18px;
+    top: 10px;">Total Marks Obtained :</span>
+
+  <span style="position: absolute;left: 240px;
+    top: 10px;">/ 4</span>
+
+    <span id="totalmarks" style="position: absolute;left: 225px;
+    top: 10px;"></span></div>
+
+  <div style="position: absolute; font-weight: bold;   left: 414px;
+    top: 460px;background-color: white; border: 1px solid black; height: 50px; width: 393px; font-size: 18px;"><span style="position: absolute;left: 18px;
+    top: 10px;">Thank You For Performing the Experiment</span></div>
+
+
+    <input type="button" id="restart" style="position:absolute; left: 1090px;
+    top: 532px; cursor:pointer; font-size: 19px; background-color: #501b26; visibility:; font-family: 'Acme', sans-serif; padding-top: 5px; color:  #FFF; border: 3px solid white; padding-bottom: 5px;" value="&nbsp;Restart&nbsp;" onclick="reset()"/>
+
+</div>
+<!-- ================================================================ -->
+<!-- ==================================================================== -->
+<!-- ===================================================================== -->
+<!-- ==================================================================== -->
+
+
+
+
+     <!-- Don't Write Code Below This Line -->
+<!-- ========================================== -->
+</div> <!---firsstdiv--->
+
+<div style="text-align: center; font-size: 12px; width:1200px; border:1px solid steelblue; position: relative; border-top:none; color: #FFF; background-color: steelblue; height: 30px; padding-top: 5px; padding-bottom: 5px">
+  <table align="center" width="100%">
+          <tr>
+              <!-- <td style="color: #FFF; text-align:left; width:33%; padding-left:20px;" > 
+                  All rights reserved @ <a style="color: #FFF; text-decoration: none;" href="https://gpgcrudrapur.in/" target="_blank">SBS Govt.PG College, Rudrapur</a>
+              </td>-->
+              <td style="text-align:center; width:33%">
+                  <!--Visitors -->
+                <!-- Start of WebFreeCounter Code -->
+                   <!--  <a href="https://www.webfreecounter.com/" target="_blank"><img src="https://www.webfreecounter.com/hit.php?id=gmeqdxpc&nd=6&style=8" border="0" alt="hit counter"></a> -->
+                <!-- End of WebFreeCounter Code -->
+              </td>
+              <!-- <td style="text-align:right; width:33%; padding-right:20px;"> 
+                  Developed by <a href="https://www.virtuality.org.in/" target="_blank" style="color: #FFF; text-decoration: none;"> Virtuality</a>
+              </td>-->
+          </tr>
+      </table>
+      </div>  
+<!-- <script src="main.js"></script> -->
+<script type="text/javascript" src="main.js"></script>
+        </td>
+      </tr>
+    </table>
 </body>
+
+<script>
+  $(window).load(function() {
+    $('#loading').hide();
+
+    // dronefirstcome()
+  });
+</script>
+
 </html>
