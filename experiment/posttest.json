@@ -2,37 +2,63 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "1. Which feature ensures stable footage in Phantom 4 Pro?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Brushless motors",
+        "b": "Three-axis gimbal stabilization",
+        "c": "Propeller size",
+        "d": "Manual joystick control"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      "explanations": {},
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. How many directional sensors are used for obstacle avoidance in Phantom 4 Pro?",
+      "answers": {
+        "a": "2",
+        "b": "3",
+        "c": "5",
+        "d": "6"
       },
+      "explanations": {},
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. What should be done before take-off?",
+      "answers": {
+        "a": "Place drone on a flat surface and check surroundings",
+        "b": "Throw the drone in the air",
+        "c": "Turn off the transmitter",
+        "d": "Disconnect the battery"
+      },
+      "explanations": {},
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "4. Which stick movement on the transmitter is used to lift the drone?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Throttle up",
+        "b": "Throttle down",
+        "c": "Clockwise rotation",
+        "d": "Camera zoom"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      "explanations": {},
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "5. The live video feed captured by the Phantom 4 Pro is viewed on?",
+      "answers": {
+        "a": "TV screen",
+        "b": "Transmitter screen or connected mobile device",
+        "c": "Drone propeller blades",
+        "d": "External hard drive"
       },
-      "correctAnswer": "c",
+      "explanations": {},
+      "correctAnswer": "b",
       "difficulty": "beginner"
     }
   ]

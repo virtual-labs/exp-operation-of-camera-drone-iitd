@@ -2,37 +2,63 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "1. What is the primary purpose of the DJI Phantom 4 Pro?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Underwater exploration",
+        "b": "Aerial photography and videography",
+        "c": "Satellite communication",
+        "d": "Military combat"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      "explanations": {},
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. How many propellers does the Phantom 4 Pro use?",
+      "answers": {
+        "a": "2",
+        "b": "3",
+        "c": "4",
+        "d": "6"
       },
+      "explanations": {},
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. Which type of sensor is used in the Phantom 4 Pro camera?",
+      "answers": {
+        "a": "CMOS",
+        "b": "CCD",
+        "c": "Infrared",
+        "d": "Ultrasonic"
+      },
+      "explanations": {},
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "4. What is required before operating the Phantom 4 Pro for the first time?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Charging the battery",
+        "b": "Signing in to DJI account and activation",
+        "c": "Painting the drone body",
+        "d": "Removing the camera"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      "explanations": {},
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "5. What type of controller does the Phantom 4 Pro use?",
+      "answers": {
+        "a": "Bluetooth joystick",
+        "b": "Dedicated remote controller with transmitter",
+        "c": "TV remote",
+        "d": "Only mobile phone app"
       },
-      "correctAnswer": "c",
+      "explanations": {},
+      "correctAnswer": "b",
       "difficulty": "beginner"
     }
   ]
